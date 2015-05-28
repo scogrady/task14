@@ -49,7 +49,7 @@ public class DownloadServlet extends HttpServlet {
 			Document doc = docBuilder.newDocument();
 			Element rootElement = doc.createElement("task14");
 			doc.appendChild(rootElement);
- 
+
 			// version elements
 			Element version = doc.createElement("Version");
 			rootElement.appendChild(version);
@@ -65,45 +65,7 @@ public class DownloadServlet extends HttpServlet {
 			// Element date = doc.createElement("date");
 			// date.appendChild(doc.createTextNode(request.getParameter("date")));
 			// version.appendChild(date);
-			if(request.getParameter("version").equals("1")) {
-
-			version.appendChild(attachSingleChild(doc, "date", request));
-			version.appendChild(attachSingleChild(doc, "bankName", request));
-			appendMultipleChild(doc, version, request, "information");
-			appendMultipleChild(doc, version, request, "whose");
-			appendMultipleChild(doc, version, request, "r11");
-			appendMultipleChild(doc, version, request, "r12");
-			appendMultipleChild(doc, version, request, "r21");
-			appendMultipleChild(doc, version, request, "r22");
-			appendMultipleChild(doc, version, request, "r31");
-			appendMultipleChild(doc, version, request, "r32");
-			appendMultipleChild(doc, version, request, "r41");
-			appendMultipleChild(doc, version, request, "r42");
-			appendMultipleChild(doc, version, request, "r51");
-			appendMultipleChild(doc, version, request, "r52");
-			appendMultipleChild(doc, version, request, "qf");
-			appendMultipleChild(doc, version, request, "r61");
-			appendMultipleChild(doc, version, request, "r62");
-			appendMultipleChild(doc, version, request, "r71");
-			appendMultipleChild(doc, version, request, "r72");
-			version.appendChild(attachSingleChild(doc, "phoneNumber", request));
-			version.appendChild(attachSingleChild(doc, "onlineWebsite", request));
-			version.appendChild(attachSingleChild(doc, "whoProvidingNotice",
-					request));
-			version.appendChild(attachSingleChild(doc, "howWeProtectPersonalInfo",
-					request));
-			appendMultipleChild(doc, version, request, "informationWhen");
-			appendMultipleChild(doc, version, request, "q10");
-			version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
-					request));
-			version.appendChild(attachSingleChild(doc, "affiliates", request));
-			version.appendChild(attachSingleChild(doc, "nonAffiliates", request));
-			version.appendChild(attachSingleChild(doc, "jointMarketing",
-					request));
-			version.appendChild(attachSingleChild(doc, "otherInfo", request));
-			
-			}
-			else if(request.getParameter("version").equals("2")) {
+			if (request.getParameter("version").equals("1")) {
 
 				version.appendChild(attachSingleChild(doc, "date", request));
 				version.appendChild(attachSingleChild(doc, "bankName", request));
@@ -124,31 +86,27 @@ public class DownloadServlet extends HttpServlet {
 				appendMultipleChild(doc, version, request, "r62");
 				appendMultipleChild(doc, version, request, "r71");
 				appendMultipleChild(doc, version, request, "r72");
-				version.appendChild(attachSingleChild(doc, "limitSharingPhoneNumber", request));
-				
-				version.appendChild(attachSingleChild(doc, "limitSharingOnlineWebsite", request));
-				version.appendChild(attachSingleChild(doc, "sharingWithinDays1",
-						request));
 				version.appendChild(attachSingleChild(doc, "phoneNumber",
 						request));
 				version.appendChild(attachSingleChild(doc, "onlineWebsite",
 						request));
-				version.appendChild(attachSingleChild(doc, "whoProvidingNotice",
-						request));
-				version.appendChild(attachSingleChild(doc, "howWeProtectPersonalInfo",
-						request));
+				version.appendChild(attachSingleChild(doc,
+						"whoProvidingNotice", request));
+				version.appendChild(attachSingleChild(doc,
+						"howWeProtectPersonalInfo", request));
 				appendMultipleChild(doc, version, request, "informationWhen");
 				appendMultipleChild(doc, version, request, "q10");
 				version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
 						request));
-				version.appendChild(attachSingleChild(doc, "affiliates", request));
-				version.appendChild(attachSingleChild(doc, "nonAffiliates", request));
+				version.appendChild(attachSingleChild(doc, "affiliates",
+						request));
+				version.appendChild(attachSingleChild(doc, "nonAffiliates",
+						request));
 				version.appendChild(attachSingleChild(doc, "jointMarketing",
 						request));
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));
-				
-				}
-			else if(request.getParameter("version").equals("3")) {
+
+			} else if (request.getParameter("version").equals("2")) {
 
 				version.appendChild(attachSingleChild(doc, "date", request));
 				version.appendChild(attachSingleChild(doc, "bankName", request));
@@ -169,54 +127,95 @@ public class DownloadServlet extends HttpServlet {
 				appendMultipleChild(doc, version, request, "r62");
 				appendMultipleChild(doc, version, request, "r71");
 				appendMultipleChild(doc, version, request, "r72");
-				version.appendChild(attachSingleChild(doc, "limitSharingPhoneNumber", request));
-				
-				version.appendChild(attachSingleChild(doc, "limitSharingOnlineWebsite", request));
-				version.appendChild(attachSingleChild(doc, "sharingWithinDays1",
+				version.appendChild(attachSingleChild(doc,
+						"limitSharingPhoneNumber", request));
+
+				version.appendChild(attachSingleChild(doc,
+						"limitSharingOnlineWebsite", request));
+				version.appendChild(attachSingleChild(doc,
+						"sharingWithinDays1", request));
+				version.appendChild(attachSingleChild(doc, "phoneNumber",
 						request));
+				version.appendChild(attachSingleChild(doc, "onlineWebsite",
+						request));
+				version.appendChild(attachSingleChild(doc,
+						"whoProvidingNotice", request));
+				version.appendChild(attachSingleChild(doc,
+						"howWeProtectPersonalInfo", request));
+				appendMultipleChild(doc, version, request, "informationWhen");
+				appendMultipleChild(doc, version, request, "q10");
+				version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliates",
+						request));
+				version.appendChild(attachSingleChild(doc, "nonAffiliates",
+						request));
+				version.appendChild(attachSingleChild(doc, "jointMarketing",
+						request));
+				version.appendChild(attachSingleChild(doc, "otherInfo", request));
+
+			} else if (request.getParameter("version").equals("3")) {
+
+				version.appendChild(attachSingleChild(doc, "date", request));
+				version.appendChild(attachSingleChild(doc, "bankName", request));
+				appendMultipleChild(doc, version, request, "information");
+				appendMultipleChild(doc, version, request, "whose");
+				appendMultipleChild(doc, version, request, "r11");
+				appendMultipleChild(doc, version, request, "r12");
+				appendMultipleChild(doc, version, request, "r21");
+				appendMultipleChild(doc, version, request, "r22");
+				appendMultipleChild(doc, version, request, "r31");
+				appendMultipleChild(doc, version, request, "r32");
+				appendMultipleChild(doc, version, request, "r41");
+				appendMultipleChild(doc, version, request, "r42");
+				appendMultipleChild(doc, version, request, "r51");
+				appendMultipleChild(doc, version, request, "r52");
+				appendMultipleChild(doc, version, request, "qf");
+				appendMultipleChild(doc, version, request, "r61");
+				appendMultipleChild(doc, version, request, "r62");
+				appendMultipleChild(doc, version, request, "r71");
+				appendMultipleChild(doc, version, request, "r72");
+				version.appendChild(attachSingleChild(doc,
+						"limitSharingPhoneNumber", request));
+
+				version.appendChild(attachSingleChild(doc,
+						"limitSharingOnlineWebsite", request));
+				version.appendChild(attachSingleChild(doc,
+						"sharingWithinDays1", request));
 				version.appendChild(attachSingleChild(doc, "phoneNumber",
 						request));
 				version.appendChild(attachSingleChild(doc, "onlineWebsite",
 						request));
 				appendMultipleChild(doc, version, request, "applyChoices");
-				version.appendChild(attachSingleChild(doc, "address1",
-						request));
-				version.appendChild(attachSingleChild(doc, "address2",
-						request));
-				version.appendChild(attachSingleChild(doc, "city",
-						request));
-				version.appendChild(attachSingleChild(doc, "state",
-						request));
-				version.appendChild(attachSingleChild(doc, "zip",
-						request));
+				version.appendChild(attachSingleChild(doc, "address1", request));
+				version.appendChild(attachSingleChild(doc, "address2", request));
+				version.appendChild(attachSingleChild(doc, "city", request));
+				version.appendChild(attachSingleChild(doc, "state", request));
+				version.appendChild(attachSingleChild(doc, "zip", request));
 				appendMultipleChild(doc, version, request, "accountNumber");
-				version.appendChild(attachSingleChild(doc, "whoProvidingNotice",
-						request));
-				version.appendChild(attachSingleChild(doc, "howWeProtectPersonalInfo",
-						request));
+				version.appendChild(attachSingleChild(doc,
+						"whoProvidingNotice", request));
+				version.appendChild(attachSingleChild(doc,
+						"howWeProtectPersonalInfo", request));
 				appendMultipleChild(doc, version, request, "informationWhen");
 				appendMultipleChild(doc, version, request, "q10");
 				version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
 						request));
-				version.appendChild(attachSingleChild(doc, "affiliates", request));
-				version.appendChild(attachSingleChild(doc, "nonAffiliates", request));
+				version.appendChild(attachSingleChild(doc, "affiliates",
+						request));
+				version.appendChild(attachSingleChild(doc, "nonAffiliates",
+						request));
 				version.appendChild(attachSingleChild(doc, "jointMarketing",
 						request));
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));
-				
-				}
-			else if(request.getParameter("version").equals("4")) {
+
+			} else if (request.getParameter("version").equals("4")) {
 				appendMultipleChild(doc, version, request, "applyChoices");
-				version.appendChild(attachSingleChild(doc, "address1",
-						request));
-				version.appendChild(attachSingleChild(doc, "address2",
-						request));
-				version.appendChild(attachSingleChild(doc, "city",
-						request));
-				version.appendChild(attachSingleChild(doc, "state",
-						request));
-				version.appendChild(attachSingleChild(doc, "zip",
-						request));
+				version.appendChild(attachSingleChild(doc, "address1", request));
+				version.appendChild(attachSingleChild(doc, "address2", request));
+				version.appendChild(attachSingleChild(doc, "city", request));
+				version.appendChild(attachSingleChild(doc, "state", request));
+				version.appendChild(attachSingleChild(doc, "zip", request));
 				appendMultipleChild(doc, version, request, "accountNumber");
 			}
 
@@ -233,8 +232,10 @@ public class DownloadServlet extends HttpServlet {
 			transformer.setOutputProperty(
 					"{http://xml.apache.org/xslt}indent-amount", "2");
 			DOMSource source = new DOMSource(doc);
-			StreamResult result = new StreamResult(new File(filePath
-					+ File.separator + fileName));
+			File file = new File(filePath + File.separator + fileName);
+			file.getParentFile().mkdirs();
+
+			StreamResult result = new StreamResult(file);
 
 			System.out.println("File saved successfully on server!!!!");
 			// Output to console for testing

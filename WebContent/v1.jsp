@@ -290,7 +290,7 @@
 				<div class="col-md-12">
 					<div class="col-md-3">
 						<input type="radio" name="whose" value="customer"
-							${mybean.field4[0]} /> Customer
+							${mybean.field4[0]} checked="checked"/> Customer
 					</div>
 					<div class="col-md-3">
 						<input type="radio" name="whose" value="member"
@@ -811,7 +811,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80" id="otherInfo"
-							name="otherInfo" required><c:out value="${mybean.field29}" /></textarea>
+							name="otherInfo"><c:out value="${mybean.field29}" /></textarea>
 					</div>
 				</div>
 
