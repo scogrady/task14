@@ -96,7 +96,7 @@
 						</div>
 						<div class="col-md-10">
 							<input size="80" maxlength="64" type="text" class="form-control"
-								name="address1" value="${mybean.field2}"/>
+								name="address1" value="${mybean.field2}" required/>
 						</div>
 
 						<br>
@@ -105,7 +105,7 @@
 						</div>
 						<div class="col-md-10">
 							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="address2" value="${mybean.field3}"/>
+								class="form-control" name="address2" value="${mybean.field3}" required/>
 						</div>
 
 						<div class="col-md-2">
@@ -113,7 +113,7 @@
 						</div>
 						<div class="col-md-10">
 							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="city" value="${mybean.field4}"/>
+								class="form-control" name="city" value="${mybean.field4}" required/>
 						</div>
 
 						<div class="col-md-2">
@@ -121,7 +121,7 @@
 						</div>
 						<div class="col-md-10">
 							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="state" value="${mybean.field5"/>
+								class="form-control" name="state" value="${mybean.field5}" required/>
 						</div>
 
 						<div class="col-md-2">
@@ -129,7 +129,7 @@
 						</div>
 						<div class="col-md-10">
 							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="zip" value="${mybean.field6"/>
+								class="form-control" name="zip" value="${mybean.field6}" required/>
 						</div>
 
 					</div>

@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +69,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="date" name="date" value="${mybean.field1}"/>
+							id="date" name="date" required value="${mybean.field1}"/>
 						<script type="text/javascript">
 							document.getElementById('date').value = Date();
 						</script>
@@ -87,7 +87,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value=" ${mybean.field2}"/>
+							id="name" name="bankName" required value=" ${mybean.field2}"/>
 					</div>
 				</div>
 
@@ -609,7 +609,7 @@
 						</div>
 						<div class="col-md-10">
 							<input size="80" maxlength="64" type="text" class="form-control"
-								id="phone" name="limitSharingPhoneNumber" ${mybean.field20}/>
+								id="phone" name="limitSharingPhoneNumber"  ${mybean.field20} required/>
 						</div>
 					</div>
 
@@ -624,7 +624,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							name="limitSharingOnlineWebsite" value="${mybean.field21}"/>
+							name="limitSharingOnlineWebsite" value="${mybean.field21}" required/>
 					</div>
 
 					<br>
@@ -633,7 +633,7 @@
 					</div>
 					<div class="col-md-10">
 						<br> <input size="80" maxlength="64" type="text"
-							class="form-control" name="sharingWithinDays1" value="${mybean.field22}"/>
+							class="form-control" name="sharingWithinDays1" value="${mybean.field22}" required/>
 					</div>
 				</div>
 
@@ -650,7 +650,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="phone" name="phoneNumber" value="${mybean.field23}"/>
+							id="phone" name="phoneNumber" value="${mybean.field23}" required/>
 					</div>
 				</div>
 
@@ -664,7 +664,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="website" name="onlineWebsite" value="${mybean.field24}"/>
+							id="website" name="onlineWebsite" value="${mybean.field24}" required/>
 					</div>
 				</div>
 
@@ -765,7 +765,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							name="whyCantLimitShare"><c:out value="${mybean.field29}"/></textarea>
+							name="whyCantLimitShare" required><c:out value="${mybean.field29}" /></textarea>
 					</div>
 				</div>
 
@@ -805,7 +805,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							name="affiliates"><c:out value="${mybean.field31}"/></textarea>
+							name="affiliates" required><c:out value="${mybean.field31}"/></textarea>
 					</div>
 				</div>
 
@@ -818,7 +818,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							name="nonAffiliates"><c:out value="${mybean.field32}"/></textarea>
+							name="nonAffiliates" required><c:out value="${mybean.field32}"/></textarea>
 					</div>
 				</div>
 
@@ -831,7 +831,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							name="jointMarketing"><c:out value="${mybean.field33}"/></textarea>
+							name="jointMarketing" required><c:out value="${mybean.field33}"/></textarea>
 					</div>
 				</div>
 

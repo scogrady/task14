@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html">
 <html lang="en">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +69,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="date" name="date" value="${mybean.field1}" />
+							id="date" name="date" value="${mybean.field1}" required/>
 						<script type="text/javascript">
 							document.getElementById('date').value = Date();
 						</script>
@@ -87,8 +87,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value=" ${mybean.field2}" />
-					</div>
+							id="name" name="bankName" value=" ${mybean.field2}" required/></div>
 				</div>
 
 				<div class="form-group col-md-12">
@@ -631,7 +630,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="phone" name="phoneNumber" value="${mybean.field20}" />
+							id="phone" name="phoneNumber" value="${mybean.field20}" required/>
 					</div>
 				</div>
 
@@ -645,7 +644,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="website" name="onlineWebsite" value="${mybean.field21}" />
+							id="website" name="onlineWebsite" value="${mybean.field21}" required/>
 					</div>
 				</div>
 
@@ -755,7 +754,7 @@
 							id="whyCantLimitShare" name="whyCantLimitShare" value="${mybean.field25}" /> --%>
 
 						<textarea class="form-control" rows="3" cols="80"
-							id="whyCantLimitShare" name="whyCantLimitShare"><c:out
+							id="whyCantLimitShare" name="whyCantLimitShare" required><c:out
 								value="${mybean.field25}" /></textarea>
 					</div>
 				</div>
@@ -771,7 +770,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80" id="affiliates"
-							name="affiliates"><c:out value="${mybean.field26}" /></textarea>
+							name="affiliates" required><c:out value="${mybean.field26}" /></textarea>
 					</div>
 				</div>
 
@@ -784,7 +783,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							id="nonAffiliates" name="nonAffiliates"><c:out
+							id="nonAffiliates" name="nonAffiliates" required><c:out
 								value="${mybean.field27}" /></textarea>
 					</div>
 				</div>
@@ -812,7 +811,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80" id="otherInfo"
-							name="otherInfo"><c:out value="${mybean.field29}" /></textarea>
+							name="otherInfo" required><c:out value="${mybean.field29}" /></textarea>
 					</div>
 				</div>
 
@@ -872,6 +871,13 @@
 						($(this).val() === 'qfyes') ? 'block' : 'none');
 			});
 
+	$('input.5checkbox').on('change', function(e) {
+		if ($('input[type=checkbox]:checked').length > 5) {
+			$(this).prop('checked', false);
+			alert("You can only select 5");
+		}
+	});
+	
 	$('input.5checkbox').on('change', function(e) {
 		if ($('input[type=checkbox]:checked').length > 5) {
 			$(this).prop('checked', false);
