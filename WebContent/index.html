@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form</title>
+<link href="css/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.ui.theme.min.css" rel="stylesheet"
+	type="text/css">
+<link href="css/jquery.ui.autocomplete.min.css" rel="stylesheet"
+	type="text/css">
+<link href="css/jquery.ui.menu.min.css" rel="stylesheet" type="text/css">
+
+
+<!-- bootstrap CSS file -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+
+<script src="javascript/jquery.js" type="text/javascript"></script>
+<!-- bxSlider Javascript file -->
+<script src="javascript/jquery.bxslider.min.js"></script>
+<!-- SmartMenus jQuery plugin -->
+<script src="javascript/jquery.smartmenus.js" type="text/javascript"></script>
+<!-- jQuery UI plugin -->
+<script src="javascript/jquery-ui.js" type="text/javascript"></script>
+<script src="javascript/jquery.ui-1.10.4.autocomplete.min.js"
+	type="text/javascript"></script>
+<!--Bootstrap plugin -->
+<script src="javascript/bootstrap.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"
+	href="css/checkout.css" />
+</head>
+
+<body>
+	<div class="container" style="margin-left: 120px">
+		<div class="row">
+			<div class="col-md-12">
+				<br /> <br />
+				<h3 class="checkout-title">Privacy Notice Form</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<form class="form-inline" method="POST" onsubmit="storeValues(this)" action="DownloadServlet">
+				<div class="form-group col-md-12">
+					<br /> <br />
+
+					<!--date-->
+					<div class="col-md-2">
+						<label for="insert_date">1.Date</label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="date" name="date" />
+						<script type="text/javascript">
+							document.getElementById('date').value = Date();
+						</script>
+
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+
+					<!--finance institution name-->
+					<div class="col-md-2">
+						<label for="name">2.Name of financial institution </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="name" name="bankName" />
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+
+					<!--personal information types-->
+					<div class="col-md-12">
+						<label for="name_of_financial_institation">3.What type of
+							information to collect?</label>
+					</div>
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="information" value="income" /> <label for="income">Income</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" name="information" value="accountBalances" /> <label
+								for="income">Account Balances</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="information" value="paymentHistory" /> <label
+								for="income">Payment History</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="information" value="creditHistory" /> <label
+								for="income">Credit History</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="information" value="creditScores" /> <label
+								for="income">Credit Scores</label>
+						</div>
+
+						<div class="col-md-3">
+							<label for="income">Add More</label>
+						</div>
+					</div>
+
+					<div class="col-md-12" id="q3"></div>
+
+					<div class="col-md-12 input_fields_wrap">
+						<br /> <input size="80" maxlength="64" type="text"
+							class="form-control add_field_button" name="mytext[]" /> <a
+							href="#" class="add_field_button glyphicon glyphicon-plus "></a>
+
+					</div>
+				</div>
+
+
+				<div class="form-group col-md-12">
+					<br />
+					<div class="col-md-12">
+						<label for="name_of_financial_institation">4.Reasons to
+							share your personal information </label>
+					</div>
+
+					<div class="col-md-12">
+						<br /> <label> a. For our everyday business purpose <span
+							class="glyphicon glyphicon-info-sign" id="popoverData1"
+							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span>
+						</label>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share?</label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-3">
+							<input type="radio" id="yes" name="r11" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" id="no" name="r11" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r12" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r12" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<br /> <label>b. For our marketing purpose <span
+							class="glyphicon glyphicon-info-sign" id="popoverData2" href="#"
+							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							rel="popover" data-placement="right" data-trigger="hover"></span></label>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share?</label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3">
+							<input type="radio" id="yes" name="r21" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" id="no" name="r21" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r22" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r22" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br /> <label>c. For joint marketing with other financial
+							companies </label>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share?</label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3">
+							<input type="radio" id="yes" name="r31" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" id="no" name="r31" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r32" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r32" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br /> <label>d. For our affiliats' everyday business
+							purposes <span class="glyphicon glyphicon-info-sign"
+							id="popoverData3" href="#"
+							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							rel="popover" data-placement="right" data-trigger="hover"></span>
+						</label>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share?</label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3">
+							<input type="radio" id="yes" name="r41" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" id="no" name="r41" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r42" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r42" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br /> <label>e. For our affiliates' everyday business
+							purposes <span class="glyphicon glyphicon-info-sign"
+							id="popoverData4" href="#"
+							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							rel="popover" data-placement="right" data-trigger="hover"></span>
+						</label>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share? </label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3">
+							<input type="radio" name="r51" id="yes" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r51" id="no" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r52" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r52" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br /> <label for="name_of_financial_institation">f. For
+							our affiliates to market you</label>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share?</label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3">
+							<input type="radio" name="r61" id="yes" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r61" id="no" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r62" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r62" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br /> <label for="name_of_financial_institation">g. For
+							nonaffiliats to market you</label>
+					</div>
+
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<label>Do you share?</label>
+						</div>
+						<div class="col-md-6">
+							<label>Can you limit sharing?</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3">
+							<input type="radio" name="r71" id="yes" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r71" id="no" value="no" /> <label
+								for="income">No</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r72" value="yes" /> <label
+								for="income">Yes</label>
+						</div>
+						<div class="col-md-3">
+							<input type="radio" name="r72" value="no" /> <label for="income">No</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+
+					<!--phone-->
+					<div class="col-md-2">
+						<label for="name">5. Phone number </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="phone" name="phoneNumber" />
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+
+					<!--website-->
+					<div class="col-md-2">
+						<label for="name">6. Online website </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="website" name="onlineWebsite" />
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--days-->
+					<div class="col-md-2">
+						<label for="name">7. Sharing Informtion within days </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="days" name="sharingWithinDays1" />
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--who we are-->
+					<div class="col-md-2">
+						<label for="name">8. Who is providing this notice? </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="days" name="whoProvidingNotice" />
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+
+					<!--days-->
+					<div class="col-md-2">
+						<label for="name">9. Sharing Informtion within days </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="name" name="sharingWithinDays2" />
+					</div>
+				</div>
+
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--days-->
+					<div class="col-md-10">
+						<label for="name">10. How to collect personal information?
+						</label>
+					</div>
+
+					<div class="col-md-10">
+						<label for="income">Collect
+							personal information when</label>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="openAccount" /> <label for="income">Open an
+								account</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="depositMoney" /> <label for="income">Deposit
+								money</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="applyLoan" /> <label for="income">Apply for
+								a loan</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="useCard" /> <label for="income">Use
+								credit/debit card</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="creditHistory" /> <label for="income">Credit
+								History</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="creditScores" /> <label for="income">Credit
+								Socres</label>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<br /> <input type="radio" name="q10" value="information from other companies" /> <label for="income">Collect
+							personal information from other companies</label>
+					</div>
+
+					<div class="col-md-12">
+						<br /> <input type="radio" name="q10" value="information from credit bureau etc" /> <label for="income">Collect
+							personal information from others, e.g. credit bureaus,
+							affiliates, or other companies</label>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--why can't limit sharing-->
+					<div class="col-md-2">
+						<label for="name">11. Why can't I limit all sharing? </label>
+					</div>
+					<div class="col-md-10">
+						<textarea class="form-control" rows="3" cols="80"  name="whyCantLimitShare"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--what happens when limit sharing-->
+					<div class="col-md-10">
+						<label for="name">12. How to protect personal information?
+						</label>
+					</div>
+
+					<div class="col-md-10">
+						<input type="radio" name="q12" value="apply to everyone on your account" /> <label for="income">Your
+							choices will apply to everyone on your account.</label>
+					</div>
+
+					<div class="col-md-10">
+						<br /> <input type="radio" name="q12" value="apply to everyone on your account - unless you tell"  /> <label for="income">Your
+							choices will apply to everyone on your account - unless you tell
+							us otherwise.</label>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--affiliates information-->
+					<div class="col-md-2">
+						<label for="name">13. Affiliates </label>
+					</div>
+					<div class="col-md-10">
+						<textarea class="form-control" rows="3" cols="80" name="affiliates"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--nonaffiliate-->
+					<div class="col-md-2">
+						<label for="name">14. Nonaffiliates </label>
+					</div>
+					<div class="col-md-10">
+						<textarea class="form-control" rows="3" cols="80"  name="nonAffiliates"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--joint marketing-->
+					<div class="col-md-2">
+						<label for="name">15. Joint marketing </label>
+					</div>
+					<div class="col-md-10">
+						<textarea class="form-control" rows="3" cols="80"  name="jointMarketing"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br />
+					<!--other important information-->
+					<div class="col-md-2">
+						<label for="name">16. Other important information </label>
+					</div>
+					<div class="col-md-10">
+						<textarea class="form-control" rows="3" cols="80"  name="otherInfo"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<br /> <br />
+					<!--other important information-->
+					<div class="col-md-6" style="text-align: center">
+						<input type="submit" class="btn btn-default btn-lg" value="Save" />
+					</div>
+
+					<div class="col-md-3" style="text-align: center">
+						<button class="btn btn-default btn-lg">Cancel</button>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+
+</body>
+
+
+<script type="text/javascript">
+	$('#popoverData1').popover();
+	$('#popoverData2').popover();
+	$('#popoverData3').popover();
+	$('#popoverData4').popover();
+
+	$(document).ready(function() {
+		$("#add1").click(function() {
+		});
+		$("#save1").click(function() {
+			$("#q3").show();
+		});
+	});
+
+	$(document)
+			.ready(
+					function() {
+						var max_fields = 10; //maximum input boxes allowed
+						var wrapper = $(".input_fields_wrap"); //Fields wrapper
+						var add_button = $(".add_field_button"); //Add button ID
+
+						var x = 1; //initlal text box count
+						$(add_button)
+								.click(
+										function(e) { //on add input button click
+											e.preventDefault();
+											if (x < max_fields) { //max input box allowed
+												x++; //text box increment
+												$(wrapper)
+														.append(
+																'<div><input input size="80" maxlength="64" type="text" class="form-control" name="mytext[]"/> <a href="#" class="remove_field glyphicon glyphicon-remove"></a></div>'); //add input box
+											}
+										});
+
+						$(wrapper).on("click", ".remove_field", function(e) { //user click on remove text
+							e.preventDefault();
+							$(this).parent('div').remove();
+							x--;
+						})
+					});
+
+	function storeValues(form) {
+		var informationList = [];
+        $.each($("input[name='information']:checked"), function(){            
+        	informationList.push($(this).val());
+        });
+        var info = informationList.join("#");
+        //alert(info);
+        
+        var informationWhen = [];
+        $.each($("input[name='informationWhen']:checked"), function(){            
+        	informationWhen.push($(this).val());
+        });
+        var infoWhn = informationWhen.join("#");
+        //alert(infoWhn);
+        
+        //alert("My favourite sports are: " + favorite.join(", "));
+
+		setCookie("form", JSON.stringify({
+			date : form.date.value,
+			bankName : form.bankName.value,
+			information : info,
+			r11 : form.r11.value,
+			r12 : form.r12.value,
+			r21 : form.r21.value,
+			r22 : form.r22.value,
+			r31 : form.r31.value,
+			r32 : form.r32.value,
+			r41 : form.r41.value,
+			r42 : form.r42.value,
+			r51 : form.r51.value,
+			r52 : form.r52.value,
+			r61 : form.r61.value,
+			r62 : form.r62.value,
+			r71 : form.r71.value,
+			r72 : form.r72.value,
+			phoneNumber : form.phoneNumber.value,
+			onlineWebsite : form.onlineWebsite.value,
+			sharingWithinDays1 : form.sharingWithinDays1.value,
+			whoProvidingNotice : form.whoProvidingNotice.value,
+			sharingWithinDays2 : form.sharingWithinDays2.value,
+			informationWhen : infoWhn,
+			q10 : form.q10.value,
+			whyCantLimitShare : form.whyCantLimitShare.value,
+			q12 : form.q12.value,
+			affiliates : form.affiliates.value,
+			nonAffiliates : form.nonAffiliates.value,
+			jointMarketing : form.jointMarketing.value, 
+			otherInfo : form.otherInfo.value
+		}));
+		return true;
+	}
+
+	function setCookie(cname, cvalue) {
+		var d = new Date();
+		d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
+		var expires = "expires=" + d.toGMTString();
+		document.cookie = cname + "=" + cvalue + "; " + expires;
+		getCookie("form");
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie;
+		/* for (var i = 0; i < ca.length; i++) {
+			var c = ca[i]; */
+			alert("c: " + ca);
+			/* while (c.charAt(0) == ' ')
+				c = c.substring(1);
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			} 
+		}*/
+		return "";
+	}
+</script>
