@@ -1136,7 +1136,7 @@
 					<br /> <br />
 					<!--other important information-->
 					<div class="col-md-3" style="text-align: center">
-						<input type="submit" class="btn btn-default" value="Generate HTML" />
+						<input id="generate" type="submit" class="btn btn-default" value="Generate HTML" />
 					</div>
 
 					<div class="col-md-3" style="text-align: center">
@@ -1175,7 +1175,13 @@
 	$('#popoverData2').popover();
 	$('#popoverData3').popover();
 	$('#popoverData4').popover();
-
+	
+	$(document).ready(function(){
+		$("#generate").click(function(){
+			window.open("privacyForm.html");
+		})
+	})
+	
 	$("input[name^='r']").click(function() {
 
 		var test = $(this).val();
@@ -1273,6 +1279,7 @@
 					});
 
 	function storeValues(form) {
+		alert(1);
 		var informationList = [];
 		$.each($("input[name='information']:checked"), function() {
 			informationList.push($(this).val());

@@ -992,10 +992,10 @@
 
 			</form>
 
-			<form method="post" action="UploadServlet"
+			<form style="float: right; margin-top: -40px"method="post" action="UploadServlet"
 				enctype="multipart/form-data">
-				Select xml file to upload: <input type="file" name="file" size="60" /><br />
-				<br /> <input type="submit" value="Upload" />
+				Select xml file to upload: <input class="btn btn-file" type="file" name="file" /><br />
+				<br /> <input class="btn btn-default" type="submit" value="Upload" />
 			</form>
 		</div>
 	</div>
