@@ -829,7 +829,7 @@
 					<input type="hidden" id="thisField" name="version" value="1">
 
 					<div class="col-md-2" style="text-align: center">
-						<button type="reset" value="Reset" class="btn btn-default ">Reset</button>
+						<button type="reset" value="Reset" class="btn btn-default " onclick="this.form.reset();">Reset</button>
 					</div>
 
 
