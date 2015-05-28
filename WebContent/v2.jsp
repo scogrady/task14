@@ -909,6 +909,14 @@
 				$('#qfShow').css('display',
 						($(this).val() === 'qfyes') ? 'block' : 'none');
 			});
+	
+	$('input.5checkbox').on('change', function(e) {
+		if ($('input[type=checkbox]:checked').length > 5) {
+			$(this).prop('checked', false);
+			alert("You can only select 5");
+		}
+	});
+
 
 	$(document)
 			.ready(
