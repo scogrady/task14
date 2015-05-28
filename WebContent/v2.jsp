@@ -59,7 +59,7 @@
 
 
 		<div class="row">
-			<form class="form-inline" method="POST" action="DownloadServlet">
+			<form class="form-inline" method="POST" onsubmit="storeValues(this)">
 				<div class="form-group col-md-12">
 					<br /> <br />
 
@@ -857,12 +857,12 @@
 						<input type="submit" name="button" class="btn btn-default"
 							value="Save As XMl" formaction="DownloadServlet" />
 					</div>
-					<input type="hidden" id="thisField" name="version" value="2">
+					<input type="hidden" id="thisField" name="version" value="1">
 
 					<div class="col-md-2" style="text-align: center">
 						<button type="reset" value="Reset" class="btn btn-default ">Reset</button>
 					</div>
- 
+
 
 				</div>
 
