@@ -130,7 +130,7 @@ information about your creditworthiness
   </table>
     <br>
 	<table class="whoProvidingNoticeTable" style="width:80%" class="table1">
-  <th class="leftalign"><font face="Arial Black" color="white">&nbsp;&nbsp;&nbsp;Who we are</font></th></table>
+  <th class="leftalign" bgcolor= "#717171"><font face="Arial Black" color="white">&nbsp;&nbsp;&nbsp;Who we are</font></th></table>
   <table style="width:80%" class="whoProvidingNoticeTable">
   
 	<colgroup>
@@ -140,7 +140,7 @@ information about your creditworthiness
   
   <tbody>
   <tr>
-  <td ><font face="Lucida Sans Unicode" color="magenta"><b>Who is providing this notice?<b></td>
+  <td ><font face="Lucida Sans Unicode" color=""><b>Who is providing this notice?<b></td>
   <td id="whoProvidingNotice">[____________]</td>
   </tr>
   </tbody>
@@ -317,9 +317,29 @@ together market financial products or services to you.
       var nonAffiliates = obj["nonAffiliates"];
       var jointMarketing = obj["jointMarketing"];
       var otherInfo = obj["otherInfo"];
-      $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + affiliates + '</font>');
-      $("#nonAffiliates").html('<font face="Lucida Sans Unicode" >Companies not related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + nonAffiliates + '</font>');
-      $("#jointMarketing").html('<font face="Lucida Sans Unicode" >A formal agreement between nonaffiliated financial companies that together market financial products or services to you.<br><li>' + jointMarketing + '</font>');
+      alert(obj["qf"]);
+      if (obj["r61"] == "r61no") {
+    	  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + bankName + 'has no affiliates' + '</font>');
+      } else {
+    	  if (obj["qf"] == "qfno") {
+    		  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + bankName + 'does not share with our affiliates' + '</font>');
+    	  } else {
+        	  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + 'Our affiliates include companies with a ' + obj["affiliatesList1"] + ' name; financial companies such as ' + obj["affiliatesList2"] + '; nonfinancial companies, such as ' + obj["affiliatesList2"] + ' ans others, such as ' + obj["affiliatesList3"] + '.' + '</font>');
+    	  }
+      }
+      
+      if (obj["r71"] == "r71no") {
+    	  $("#nonAffiliates").html('<font face="Lucida Sans Unicode" >Companies not related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + bankName + ' deos not share with nonaffiliates so thry can market to yuo ' + '</font>');
+      } else {
+    	  $("#nonAffiliates").html('<font face="Lucida Sans Unicode" >Companies not related by common ownership or control. They can be financial and nonfinancial companies.<br><li>Nonaffiliates we share with can include ' + nonAffiliates + '</font>');
+      }
+      
+      if (obj["jointMkt"] == "jointMktno") {
+    	  $("#jointMarketing").html('<font face="Lucida Sans Unicode" >A formal agreement between nonaffiliated financial companies that together market financial products or services to you.<br><li>' + bankName + 'doesn' + "''" + 't jointly market' + '</font>');
+      } else {
+    	  $("#jointMarketing").html('<font face="Lucida Sans Unicode" >A formal agreement between nonaffiliated financial companies that together market financial products or services to you.<br><li>' + 'Our joint marketing partners include ' + jointMarketing + '</font>');
+      }
+      
       $("#otherInfo").html(otherInfo);
 
       var ans = obj["r11"];
@@ -334,7 +354,7 @@ together market financial products or services to you.
           }
         }
       }
-      if (obj["qf"] === "qfno") {
+      if (obj["qf"] != "qfyes") {
         $("#affiliates").remove();
       }
       
