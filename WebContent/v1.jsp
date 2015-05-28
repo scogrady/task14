@@ -68,12 +68,9 @@
 						<label for="insert_date"><span class="star"> * </span>Date</label>
 					</div>
 					<div class="col-md-10">
-						<input size="80" maxlength="64" type="text" class="form-control"
-							id="date" name="date" value="${mybean.field1}" required/>
-						<script type="text/javascript">
-							document.getElementById('date').value = Date();
-						</script>
-
+						<input type="date" class="form-control" name="date"
+							min="2000-01-01" max="2015-12-31" value="2015-05-29"
+							${mybean.field1} required /><br>
 					</div>
 				</div>
 
@@ -87,7 +84,8 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value=" ${mybean.field2}" required/></div>
+							id="name" name="bankName" value="${mybean.field2}" required />
+					</div>
 				</div>
 
 				<div class="form-group col-md-12">
@@ -200,10 +198,10 @@
 						</div>
 
 						<div class="col-md-3">
-                            <input class="5checkbox" type="checkbox" name="information"
-                                value="wireTransferInstructions" ${mybean.field3[23]} /> <label
-                                for="income">Wire Transfer Instructions</label>
-                        </div>
+							<input class="5checkbox" type="checkbox" name="information"
+								value="wireTransferInstructions" ${mybean.field3[23]} /> <label
+								for="income">Wire Transfer Instructions</label>
+						</div>
 
 					</div>
 
@@ -290,7 +288,7 @@
 				<div class="col-md-12">
 					<div class="col-md-3">
 						<input type="radio" name="whose" value="customer"
-							${mybean.field4[0]} checked="checked"/> Customer
+							${mybean.field4[0]} checked="checked" /> Customer
 					</div>
 					<div class="col-md-3">
 						<input type="radio" name="whose" value="member"
@@ -336,8 +334,8 @@
 						</div>
 						<div id="r11yes" class="desc1">
 							<div class="col-md-1">
-								<input type="radio" name="r12" value="yes" ${mybean.field6[0]} checked="checked"/>
-								Yes
+								<input type="radio" name="r12" value="yes" ${mybean.field6[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r12" value="no" ${mybean.field6[1]} />
@@ -368,7 +366,7 @@
 					<div class="col-md-12">
 						<div class="col-md-3">
 							<input type="radio" id="yes" name="r21" value="21yes"
-								${mybean.field7[0]} checked="checked"/>Yes
+								${mybean.field7[0]} checked="checked" />Yes
 						</div>
 						<div class="col-md-3">
 							<input type="radio" id="no" name="r21" value="21no"
@@ -450,7 +448,7 @@
 					<div class="col-md-12">
 						<div class="col-md-3">
 							<input type="radio" id="yes" name="r41" value="41yes"
-								${mybean.field11[0]} checked="checked"/>Yes
+								${mybean.field11[0]} checked="checked" />Yes
 						</div>
 						<div class="col-md-3">
 							<input type="radio" id="no" name="r41" value="41no"
@@ -493,7 +491,7 @@
 					<div class="col-md-12">
 						<div class="col-md-3">
 							<input type="radio" id="yes" name="r51" value="51yes"
-								${mybean.field13[0]} checked="checked"/>Yes
+								${mybean.field13[0]} checked="checked" />Yes
 						</div>
 						<div class="col-md-3">
 							<input type="radio" id="no" name="r51" value="51no"
@@ -521,7 +519,7 @@
 					<div>
 						<div class="col-md-3">
 							<input type="radio" id="yes" name="qf" value="qfyes"
-								${mybean.field15[0]} checked="checked"/>Yes
+								${mybean.field15[0]} checked="checked" />Yes
 						</div>
 						<div class="col-md-3">
 							<input type="radio" id="no" name="qf" value="qfno"
@@ -550,7 +548,7 @@
 						<div class="col-md-12">
 							<div class="col-md-3">
 								<input type="radio" id="yes" name="r61" value="61yes"
-									${mybean.field16[0]} checked="checked"/>Yes
+									${mybean.field16[0]} checked="checked" />Yes
 							</div>
 							<div class="col-md-3">
 								<input type="radio" id="no" name="r61" value="61no"
@@ -593,7 +591,7 @@
 					<div class="col-md-12">
 						<div class="col-md-3">
 							<input type="radio" id="yes" name="r71" value="71yes"
-								${mybean.field18[0]} checked="checked"/>Yes
+								${mybean.field18[0]} checked="checked" />Yes
 						</div>
 						<div class="col-md-3">
 							<input type="radio" id="no" name="r71" value="71no"
@@ -630,7 +628,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="phone" name="phoneNumber" value="${mybean.field20}" required/>
+							id="phone" name="phoneNumber" value="${mybean.field20}" required />
 					</div>
 				</div>
 
@@ -644,7 +642,8 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="website" name="onlineWebsite" value="${mybean.field21}" required/>
+							id="website" name="onlineWebsite" value="${mybean.field21}"
+							required />
 					</div>
 				</div>
 
@@ -702,10 +701,11 @@
 								${mybean.field23[1]}>Deposit money</label>
 						</div>
 
-						<div class="col-md-3">
-							<input type="checkbox" name="informationWhen" value="applyLoan"
-								${mybean.field23[2]} /> <label for="income">Apply for a
-								loan</label>
+						<div class="col-md-6">
+
+							<input type="checkbox" name="informationWhen"
+								value="tellWhereSendMoney" ${mybean.field23[0]} /> <label
+								for="income">Tell us where to send the money</label>
 						</div>
 					</div>
 
@@ -725,7 +725,258 @@
 								bills</label>
 						</div>
 
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="seekFinancialTaxAdvice" ${mybean.field23[0]} /> <label
+								for="income">Seek financial or tax advice</label>
+						</div>
+
 					</div>
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="applyForInsurance" ${mybean.field23[0]} /> <label
+								for="income">Apply for insurance</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="payInsurancePremium" /> <label for="income"
+								${mybean.field23[0]}>Pay insurance premiums</label>
+						</div>
+
+						<div class="col-md-6">
+
+							<input type="checkbox" name="informationWhen"
+								value="directUsSellSecurities" /> <label for="income"
+								${mybean.field23[0]}>Direct us to sell your securities</label>
+
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="sellSecurities" ${mybean.field23[0]} /> <label
+								for="income">Sell securities to us</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="buySecurities" ${mybean.field23[0]} /> <label
+								for="income">Buy securities from us</label>
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="seekAdviceInvestments" ${mybean.field23[0]} /> <label
+								for="income">Seek advice about your investments</label>
+						</div>
+
+					</div>
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="directUsBuySecurities" ${mybean.field23[0]} /> <label
+								for="income">Direct us to buy securities</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="fileAnInsuranceClaim" ${mybean.field23[0]} /> <label
+								for="income">File an insurance claim</label>
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="makeDepositsWithdrawalsFromAccount" ${mybean.field23[0]} />
+							<label for="income">Make deposits or withdrawals from
+								your account</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="provideEmploymentInformation" ${mybean.field23[0]} /> <label
+								for="income">Provide employment information</label>
+
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="giveUsIncomeInformation" ${mybean.field23[0]} /> <label
+								for="income">Give us your income information</label>
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="enterIntoInvestmentAdvisoryContract" ${mybean.field23[0]} />
+							<label for="income">Enter into an investment advisory
+								contract</label>
+						</div>
+
+					</div>
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="giveEmploymentHistory" ${mybean.field23[0]} /> <label
+								for="income">Give us your employment history</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="provideAccountInformation" ${mybean.field23[0]} /> <label
+								for="income">Provide account information</label>
+
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="tellAboutInvestmentRetirementEarnings"
+								${mybean.field23[0]} /> <label for="income">Tell us
+								about your investment or retirement earnings</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="applyFinancing" ${mybean.field23[0]} /> <label
+								for="income">Apply for financing</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="applyLease"
+								${mybean.field23[0]} /> <label for="income">Apply for a
+								lease</label>
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="tellAboutInvestmentRetirementPortfolio" /> <label
+								for="income" ${mybean.field23[0]}>Tell us about your
+								investment or retirement portfolio</label>
+
+						</div>
+
+					</div>
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="payUsByCheck" /> <label for="income"
+								${mybean.field23[0]}>Pay us by check</label>
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="giveWageStatement" ${mybean.field23[0]} /> <label
+								for="income">Give us your wage statements</label>
+						</div>
+
+						<div class="col-md-6">
+
+							<input type="checkbox" name="informationWhen"
+								value="giveContactInformation" ${mybean.field23[0]} /> <label
+								for="income">Give us your contact information</label>
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="makeWireTransfer" ${mybean.field23[0]} /> <label
+								for="income">Make a wire transfer</label>
+
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="tellWhoReceivesMoney" ${mybean.field23[0]} /> <label
+								for="income">Tell us who receives the money</label>
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="provideMortgageInformation" ${mybean.field23[0]} /> <label
+								for="income">Provide your mortgage information</label>
+
+						</div>
+
+					</div>
+
+					<div class="col-md-12">
+						<br />
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen"
+								value="showDriverLicense" ${mybean.field23[0]} /> <label
+								for="income">Show your driver's license</label>
+
+						</div>
+
+						<div class="col-md-3">
+							<input type="checkbox" name="informationWhen" value="applyLoan"
+								${mybean.field23[2]} /> <label for="income">Apply for a
+								loan</label>
+
+
+						</div>
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="showGovernmentIssuedId" /> <label for="income"
+								${mybean.field23[0]}>Show your government-issued ID</label>
+
+						</div>
+					</div>
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-6">
+							<input type="checkbox" name="informationWhen"
+								value="orderCommodityFuturesOptionTrade" ${mybean.field23[0]} />
+							<label for="income">Order a commodity futures or option
+								trade</label>
+						</div>
+
+					</div>
+
+
+
+					<div class="col-md-12">
+						<br />
+
+						<div class="col-md-4">
+							<input type="checkbox" name="informationWhen"
+								value="orderCommodityFuturesOptionTrade" ${mybean.field23[0]} />
+							<label for="income">Order a commodity futures or option
+								trade</label>
+						</div>
+
+					</div>
+
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
@@ -754,52 +1005,118 @@
 							id="whyCantLimitShare" name="whyCantLimitShare" value="${mybean.field25}" /> --%>
 
 						<textarea class="form-control" rows="3" cols="80"
-							id="whyCantLimitShare" name="whyCantLimitShare" required><c:out
-								value="${mybean.field25}" /></textarea>
+							id="whyCantLimitShare" name="whyCantLimitShare"
+							required="required"><c:out value="${mybean.field25}" /></textarea>
 					</div>
 				</div>
 
 
+				<div id="affList">
+					<div class="form-group col-md-12">
+						<br />
+						<!--affiliates information-->
+						<div class="col-md-12">
+							<label for="name"><span class="star"> * </span>Affiliates
+								Information</label>
+						</div>
 
-				<div class="form-group col-md-12">
-					<br />
-					<!--affiliates information-->
-					<div class="col-md-2">
-						<label for="name"><span class="star"> * </span>Affiliates
-						</label>
+						<div class="col-md-2">
+							<label for="name"><span class="star"> * </span>Common
+								Corporate Identity of Financial Institution(Name) </label>
+						</div>
+
+
+						<div class="col-md-10">
+							<input size="78" maxlength="62" type="text" class="form-control"
+								id="affiliatesName" name="affiliates1" value="${mybean.field26}" />
+						</div>
 					</div>
-					<div class="col-md-10">
-						<textarea class="form-control" rows="3" cols="80" id="affiliates"
-							name="affiliates" required><c:out value="${mybean.field26}" /></textarea>
+					<div class="form-group col-md-12">
+						<br />
+						<div class="col-md-2">
+							<label for="name"><span class="star"> * </span>List of
+								Financial Companies </label>
+						</div>
+						<div class="col-md-10">
+							<textarea class="form-control" rows="3" cols="80" id="affiliates"
+								name="affiliatesList1"><c:out
+									value="${mybean.field26}" /></textarea>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<br />
+						<div class="col-md-2">
+							<label for="name"><span class="star"> * </span>List of
+								Non-Financial Companies </label>
+						</div>
+						<div class="col-md-10">
+							<textarea class="form-control" rows="3" cols="80" id="affiliates"
+								name="affiliatesList2"><c:out
+									value="${mybean.field26}" /></textarea>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<br />
+						<div class="col-md-2">
+							<label for="name"><span class="star"> * </span>List of
+								other Companies </label>
+						</div>
+						<div class="col-md-10">
+							<textarea class="form-control" rows="3" cols="80" id="affiliates"
+								name="affiliatesList3"><c:out
+									value="${mybean.field26}" /></textarea>
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group col-md-12">
-					<br />
-					<!--nonaffiliate-->
-					<div class="col-md-2">
-						<label for="name"><span class="star"> * </span>Nonaffiliates
-						</label>
-					</div>
-					<div class="col-md-10">
-						<textarea class="form-control" rows="3" cols="80"
-							id="nonAffiliates" name="nonAffiliates" required><c:out
-								value="${mybean.field27}" /></textarea>
+				<div id="nonAffList">
+					<div class="form-group col-md-12">
+						<br />
+						<!--nonaffiliate-->
+						<div class="col-md-2">
+							<label for="name"><span class="star"> * </span>Nonaffiliates
+							</label>
+						</div>
+						<div class="col-md-10">
+							<textarea class="form-control" rows="3" cols="80"
+								id="nonAffiliates" name="nonAffiliates"><c:out
+									value="${mybean.field27}" /></textarea>
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group col-md-12">
-					<br />
-					<!--joint marketing-->
-					<div class="col-md-2">
-						<label for="name"><span class="star"> * </span>Joint
-							marketing </label>
-					</div>
-					<div class="col-md-10">
-						<textarea class="form-control" rows="3" cols="80"
-							id="jointMarketing" name="jointMarketing"><c:out
-								value="${mybean.field28}" /></textarea>
 
+				<div class="col-md-12">
+					<br /> <label><span class="star"> * </span>Do you get
+						involved in Joint Maketing and share information with them ?</label>
+				</div>
+				<div>
+
+					<div class="col-md-3">
+						<input type="radio" id="yes" name="jointMkt" value="jointMktyes"
+							checked="checked" ${mybean.field15[0]} checked="checked" />Yes
+					</div>
+					<div class="col-md-3">
+						<input type="radio" id="no" name="jointMkt" value="jointMktno"
+							${mybean.field15[1]} /> No
+					</div>
+
+
+				</div>
+				<div id="jointMktList">
+					<div class="form-group col-md-12">
+						<br />
+						<!--joint marketing-->
+						<div class="col-md-2">
+							<label for="name"><span class="star"> * </span>Joint
+								marketing </label>
+						</div>
+						<div class="col-md-10">
+							<textarea class="form-control" rows="3" cols="80"
+								id="jointMarketing" name="jointMarketing" required><c:out
+									value="${mybean.field28}" /></textarea>
+
+						</div>
 					</div>
 				</div>
 
@@ -824,12 +1141,13 @@
 
 					<div class="col-md-3" style="text-align: center">
 						<input type="submit" name="button" class="btn btn-default"
-							value="Save As XMl" formaction="DownloadServlet" />
+							value="Save As XML" formaction="DownloadServlet" />
 					</div>
 					<input type="hidden" id="thisField" name="version" value="1">
 
 					<div class="col-md-2" style="text-align: center">
-						<button type="reset" value="Reset" class="btn btn-default " onclick="this.form.reset();">Reset</button>
+						<button type="reset" value="Reset" class="btn btn-default "
+							onclick="this.form.reset();">Reset</button>
 					</div>
 
 
@@ -837,10 +1155,14 @@
 
 			</form>
 
-			<form style="float: right; margin-top: -40px"method="post" action="UploadServlet"
+			<form method="post" action="UploadServlet"
 				enctype="multipart/form-data">
-				Select xml file to upload: <input class="btn btn-file" type="file" name="file" /><br />
-				<br /> <input class="btn btn-default" type="submit" value="Upload" />
+				<div class="form-group col-md-12">
+					<br /> <label for="name">Select old file to upload:</label><input
+						class="btn btn-default " type="file" name="file" size="60" /><br />
+					<br /> <input class="btn btn-default " type="submit"
+						value="Upload" />
+				</div>
 			</form>
 		</div>
 	</div>
@@ -877,39 +1199,77 @@
 			alert("You can only select 5");
 		}
 	});
-	
-	$('input.5checkbox').on('change', function(e) {
-		if ($('input[type=checkbox]:checked').length > 5) {
-			$(this).prop('checked', false);
-			alert("You can only select 5");
-		}
-	});
+
+	$("input[name='r61']").click(
+			function() {
+
+				$('#affList').css('display',
+						($(this).val() === '61yes') ? 'block' : 'none');
+			});
+
+	$("input[name='r71']").click(
+			function() {
+
+				$('#nonAffList').css('display',
+						($(this).val() === '71yes') ? 'block' : 'none');
+			});
+
+	$("input[name='jointMkt']").click(
+            function() {
+
+                $('#jointMktList').css('display',
+                        ($(this).val() === 'jointMktyes') ? 'block' : 'none');
+            });
 
 	$(document)
 			.ready(
 					function() {
-						var max_fields = 10; //maximum input boxes allowed
-						var wrapper = $(".input_fields_wrap"); //Fields wrapper
-						var add_button = $(".add_field_button"); //Add button ID
 
-						var x = 1; //initlal text box count
-						$(add_button)
-								.click(
-										function(e) { //on add input button click
-											e.preventDefault();
-											if (x < max_fields) { //max input box allowed
-												x++; //text box increment
-												$(wrapper)
-														.append(
-																'<div><input input size="80" maxlength="64" type="text" class="form-control" name="mytext[]"/> <a href="#" class="remove_field glyphicon glyphicon-remove"></a></div>'); //add input box
-											}
-										});
+						var date = new Date().toISOString().substring(0, 10);
+						field = document.querySelector('#date');
+						//alert(date);
+						var chunks = date.split('-');
+						//alert(chunks[1] + '/' + chunks[2] + '/' + chunks[0]);
+						var formattedDate = chunks[1] + '/' + chunks[2] + '/'
+								+ chunks[0];
 
-						$(wrapper).on("click", ".remove_field", function(e) { //user click on remove text
-							e.preventDefault();
-							$(this).parent('div').remove();
-							x--;
-						})
+						$('#date').val(formattedDate);
+
+						var intputElements = document
+								.getElementsByTagName("input");
+						for (var i = 0; i < intputElements.length; i++) {
+							intputElements[i].oninvalid = function(e) {
+								e.target.setCustomValidity("");
+								if (!e.target.validity.valid) {
+									//alert(e.target.name);
+									if (e.target.name === "bankName") {
+										e.target
+												.setCustomValidity("Please enter the name of the Financial Institution.");
+									} else if (e.target.name === "phoneNumber") {
+										e.target
+												.setCustomValidity("Please enter a phone number.");
+									} else if (e.target.name === "onlineWebsite") {
+										e.target
+												.setCustomValidity("Please enter a website.");
+									} else if (e.target.name == "whyCantLimitShare") {
+										e.target
+												.setCustomValidity("Please enter information regarding why can't the bank limit sharing.");
+									} else if (e.target.name == "affiliates") {
+										e.target
+												.setCustomValidity("Please enter information regarding your Affiliates.");
+									} else if (e.target.name == "nonAffiliates") {
+										e.target
+												.setCustomValidity("Please enter information regarding your Non-Affiliates.");
+									} else if (e.target.name == "jointMarketing") {
+										e.target
+												.setCustomValidity("Please enter information regarding Joint Marketing.");
+									} else {
+										e.target
+												.setCustomValidity("Please enter this information.");
+									}
+								}
+							}
+						}
 					});
 
 	function storeValues(form) {
@@ -957,8 +1317,12 @@
 			informationWhen : infoWhn,
 			q10 : form.q10.value,
 			whyCantLimitShare : form.whyCantLimitShare.value,
-			affiliates : form.affiliates.value,
+			affiliatesName : form.affiliatesName.value,
+			affiliatesList1 : form.affiliatesList1.value,
+			affiliatesList2 : form.affiliatesList2.value,
+			affiliatesList3 : form.affiliatesList3.value,
 			nonAffiliates : form.nonAffiliates.value,
+			jointMkt : form.jointMkt.value,
 			jointMarketing : form.jointMarketing.value,
 			otherInfo : form.otherInfo.value
 		}));
