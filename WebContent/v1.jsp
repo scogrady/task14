@@ -690,20 +690,20 @@
 					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen" value="openAccount"
-								${mybean.field23[0]} /> <label for="income">Open an
-								account</label>
+							<input class="6checkbox" type="checkbox" name="informationWhen"
+								value="openAccount" ${mybean.field23[0]} /> <label for="income">Open
+								an account</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="depositMoney" /> <label for="income"
 								${mybean.field23[1]}>Deposit money</label>
 						</div>
 
 						<div class="col-md-6">
 
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="tellWhereSendMoney" ${mybean.field23[2]} /> <label
 								for="income">Tell us where to send the money</label>
 						</div>
@@ -714,19 +714,19 @@
 						<br />
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen" value="useCard"
-								${mybean.field23[3]} /> <label for="income">Use
+							<input class="6checkbox" type="checkbox" name="informationWhen"
+								value="useCard" ${mybean.field23[3]} /> <label for="income">Use
 								credit/debit card</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen" value="payBill"
-								${mybean.field23[4]} /> <label for="income">Pay your
-								bills</label>
+							<input class="6checkbox" type="checkbox" name="informationWhen"
+								value="payBill" ${mybean.field23[4]} /> <label for="income">Pay
+								your bills</label>
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="seekFinancialTaxAdvice" ${mybean.field23[5]} /> <label
 								for="income">Seek financial or tax advice</label>
 						</div>
@@ -736,20 +736,20 @@
 					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="applyForInsurance" ${mybean.field23[6]} /> <label
 								for="income">Apply for insurance</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="payInsurancePremium" /> <label for="income"
 								${mybean.field23[7]}>Pay insurance premiums</label>
 						</div>
 
 						<div class="col-md-6">
 
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="directUsSellSecurities" /> <label for="income"
 								${mybean.field23[8]}>Direct us to sell your securities</label>
 
@@ -761,19 +761,19 @@
 						<br />
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="sellSecurities" ${mybean.field23[9]} /> <label
 								for="income">Sell securities to us</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="buySecurities" ${mybean.field23[10]} /> <label
 								for="income">Buy securities from us</label>
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="seekAdviceInvestments" ${mybean.field23[11]} /> <label
 								for="income">Seek advice about your investments</label>
 						</div>
@@ -783,19 +783,19 @@
 					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="directUsBuySecurities" ${mybean.field23[12]} /> <label
 								for="income">Direct us to buy securities</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="fileAnInsuranceClaim" ${mybean.field23[13]} /> <label
 								for="income">File an insurance claim</label>
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="makeDepositsWithdrawalsFromAccount" ${mybean.field23[14]} />
 							<label for="income">Make deposits or withdrawals from
 								your account</label>
@@ -807,23 +807,23 @@
 						<br />
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="provideEmploymentInformation" ${mybean.field23[15]} /> <label
 								for="income">Provide employment information</label>
 
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="giveUsIncomeInformation" ${mybean.field23[16]} /> <label
 								for="income">Give us your income information</label>
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
-								value="enterIntoInvestmentAdvisoryContract" ${mybean.field23[17]} />
-							<label for="income">Enter into an investment advisory
-								contract</label>
+							<input class="6checkbox" type="checkbox" name="informationWhen"
+								value="enterIntoInvestmentAdvisoryContract"
+								${mybean.field23[17]} /> <label for="income">Enter into
+								an investment advisory contract</label>
 						</div>
 
 					</div>
@@ -831,20 +831,20 @@
 					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="giveEmploymentHistory" ${mybean.field23[18]} /> <label
 								for="income">Give us your employment history</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="provideAccountInformation" ${mybean.field23[19]} /> <label
 								for="income">Provide account information</label>
 
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="tellAboutInvestmentRetirementEarnings"
 								${mybean.field23[20]} /> <label for="income">Tell us
 								about your investment or retirement earnings</label>
@@ -856,19 +856,19 @@
 						<br />
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="applyFinancing" ${mybean.field23[21]} /> <label
 								for="income">Apply for financing</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen" value="applyLease"
-								${mybean.field23[22]} /> <label for="income">Apply for a
-								lease</label>
+							<input class="6checkbox" type="checkbox" name="informationWhen"
+								value="applyLease" ${mybean.field23[22]} /> <label for="income">Apply
+								for a lease</label>
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="tellAboutInvestmentRetirementPortfolio" /> <label
 								for="income" ${mybean.field23[23]}>Tell us about your
 								investment or retirement portfolio</label>
@@ -880,20 +880,20 @@
 					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="payUsByCheck" /> <label for="income"
 								${mybean.field23[24]}>Pay us by check</label>
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="giveWageStatement" ${mybean.field23[25]} /> <label
 								for="income">Give us your wage statements</label>
 						</div>
 
 						<div class="col-md-6">
 
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="giveContactInformation" ${mybean.field23[26]} /> <label
 								for="income">Give us your contact information</label>
 						</div>
@@ -904,20 +904,20 @@
 						<br />
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="makeWireTransfer" ${mybean.field23[27]} /> <label
 								for="income">Make a wire transfer</label>
 
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="tellWhoReceivesMoney" ${mybean.field23[28]} /> <label
 								for="income">Tell us who receives the money</label>
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="provideMortgageInformation" ${mybean.field23[29]} /> <label
 								for="income">Provide your mortgage information</label>
 
@@ -928,22 +928,22 @@
 					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="showDriverLicense" ${mybean.field23[30]} /> <label
 								for="income">Show your driver's license</label>
 
 						</div>
 
 						<div class="col-md-3">
-							 <input class="6checkbox" type="checkbox" name="informationWhen" value="applyLoan"
-								${mybean.field23[31]} /> <label for="income">Apply for a
-								loan</label>
+							<input class="6checkbox" type="checkbox" name="informationWhen"
+								value="applyLoan" ${mybean.field23[31]} /> <label for="income">Apply
+								for a loan</label>
 
 
 						</div>
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="showGovernmentIssuedId" /> <label for="income"
 								${mybean.field23[32]}>Show your government-issued ID</label>
 
@@ -955,7 +955,7 @@
 						<br />
 
 						<div class="col-md-6">
-							 <input class="6checkbox" type="checkbox" name="informationWhen"
+							<input class="6checkbox" type="checkbox" name="informationWhen"
 								value="orderCommodityFuturesOptionTrade" ${mybean.field23[33]} />
 							<label for="income">Order a commodity futures or option
 								trade</label>
@@ -964,17 +964,17 @@
 					</div>
 
 					<div class="col-md-12">
-						<br /> <input type="radio" name="q10"
-							value="informationFromOtherCompanies" ${mybean.field24[0]} />
-						<label for="income">Collect personal information from
-							other companies</label>
+						<br /> <input type="radio" name="q10" checked="checked"
+							value="informationFromOtherCompanies" ${mybean.field24[0]} /> <label
+							for="income">Collect personal information from other
+							companies</label>
 					</div>
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
-							value="informationFromCreditBureauEtc" ${mybean.field24[1]} />
-						<label for="income">Collect personal information from
-							others, e.g. credit bureaus, affiliates, or other companies</label>
+							value="informationFromCreditBureauEtc" ${mybean.field24[1]} /> <label
+							for="income">Collect personal information from others,
+							e.g. credit bureaus, affiliates, or other companies</label>
 					</div>
 				</div>
 
@@ -1013,7 +1013,8 @@
 
 						<div class="col-md-10">
 							<input size="78" maxlength="62" type="text" class="form-control"
-								id="affiliatesName" name="affiliatesName" value="${mybean.field26}" />
+								id="affiliatesName" name="affiliatesName"
+								value="${mybean.field26}" />
 						</div>
 					</div>
 					<div class="form-group col-md-12">
@@ -1065,7 +1066,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
 								id="nonAffiliates" name="nonAffiliates"><c:out
-									value="${mybean.field30}" /></textarea>
+									value="${mybean.field32}" /></textarea>
 						</div>
 					</div>
 				</div>
@@ -1098,7 +1099,7 @@
 						</div>
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
-								id="jointMarketing" name="jointMarketing" required><c:out
+								id="jointMarketing" name="jointMarketing"><c:out
 									value="${mybean.field32}" /></textarea>
 
 						</div>
@@ -1141,7 +1142,8 @@
 			</form>
 
 			<form method="post" action="UploadServlet"
-				enctype="multipart/form-data" style="float: right; margin-top: -80px">
+				enctype="multipart/form-data"
+				style="float: right; margin-top: -80px">
 				<div class="form-group col-md-12">
 					<br /> <label for="name">Select file to upload:</label><input
 						class="btn btn-default " type="file" name="file" size="60" /><br />
