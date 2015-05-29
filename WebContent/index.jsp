@@ -28,12 +28,22 @@
 	type="text/javascript"></script>
 <!--Bootstrap plugin -->
 <script src="javascript/bootstrap.js"></script>
-
+ 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"
 	href="css/checkout.css" />
 </head>
 
-<body>
+<body >
+
+    <div class="container" style="width:40%" >
+      <div class="header clearfix">
+        
+        <h1 class="text-muted" ><font color="green" ><u>Interactive Privacy Form Builder</u></font></h1>
+      </div>
+     </div> 
+     <div align="center"> <img src="icon.png" alt="Smiley face" height="42" width="42"></div>
+      <div align="center"><h2><font color="blue" face="Lucida Sans Unicode">TEAM JUST IN TIME</font></h2></div>
+      
 	<div class="container" style="margin-left: 120px">
 		<div class="row">
 			
@@ -41,21 +51,8 @@
 
 		<div class="row">
 			<form class="form-inline">
-				
-
-				
 				<div class="form-group col-md-12">
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
+					
 
 					<!--finance institution name-->
 					<div class="col-md-10" style="text-align: center">
@@ -72,20 +69,31 @@
 					</div>	
 
 								
-					
+				</div>	
+				</form>
 		</div>
 	</div>
+	<br>
 	<div class="row" style="text-align: center">
 		<div class="col-md-offset-3 col-md-5">
-			<h3>Help Information</h3>
-			<ul style="float: left">
-				<li style="float: left">Version1: Model Form without Opt-out</li>
-				<li style="float: left">Version2: Model Form with Opt-out by Telephone or Online</li>
-				<li style="float: left">Version3: Model Form with Mail-in Opt-out Form</li>
-				<li style="float: left">Version4: Optional Mail-in Form</li>
-			</ul>
+			
+			<div class="panel panel-default" style="width: 100%" align="center">
+				<div class="panel-body" align="center"><h3>Help Information</h3></div>
+				<div class="panel-footer" align="left"  >
+				
+						<b>Version1:</b> Model Form without Opt-out<br>
+						<b>Version2:</b> Model Form with Opt-out by Telephone or Online<br>
+						<b>Version3:</b> Model Form with Mail in opt out Form<br>
+						<b>Version4:</b> Optional Mail in Form
+						</ul>
+				</div>
+			</div>
+			
 		</div>
 	</div>
+	
+	
+	
 </body>
 <script>
 	$(document).ready(function(){

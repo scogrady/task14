@@ -305,6 +305,7 @@ together market financial products or services to you.
       var cookie = document.cookie.substring(5);
       var obj = JSON.parse(cookie);
       var version = obj["version"];
+      var bankName = obj["bankName"];
       if (version === "4") {
           var s;
           var accounts = "";
@@ -317,8 +318,10 @@ together market financial products or services to you.
           if (obj["accountNumber"] === "yes") {
             accounts = '<tr> <td bgcolor= "#717171"><font color="white">[Account #]</font></td><td></td></tr>';
           }
-      }
-      var bankName = obj["bankName"];
+
+          $("body").html('<table style="width:80%"><colgroup><col style="width:15%"><col style="width:85%"></colgroup>  <tbody><tr><td bgcolor= "#717171"><font face="Arial Black" color="white">To limit our sharing</font></td><td><font face="Lucida Sans Unicode"><ul><li> Call '+obj["limitSharingPhoneNumber"] + '—our menu will prompt you through your choice(s)<li> Visit us online:' + obj["limitSharingOnlineWebsite"] +' or<li> Mail the form below</ul><br><b>Please note:</b><br>If you are a new customer, we can begin sharing your information' + obj["sharingWithinDays1"] + ' days from the date we<br>sent this notice. When you are no longer our customer, we continue to share your information as<br>described in this notice.<br>However, you can contact us at any time to limit our sharing. </font></td> </tr></tbody></table>' + '<table style="width:80%" class="table4"><th bgcolor="#717171" class="leftalign"><font face="Arial Black" color="white">&nbsp;&nbsp;&nbsp;Mail in Form</font></th></table><table style="width:80%"><colgroup><col style="width:15%"><col style="width:85%"></colgroup>  <tbody><tr><td>' + s + '</td> <td><font face="Lucida Sans Unicode"> Mark any/all you want to limit: <ul><li> Do not share information about my creditworthiness with your affiliates for their everyday business purposes.<li>Do not allow your affiliates to use my personal information to market to me. <li>Do not share my personal information with nonaffiliates to market their products and services to me. </ul></font> <table id="tablein" style="width:100%"><colgroup><col style="width:80%"><col style="width:20%"></colgroup>  <tbody><tr><td><table style="width:100%" id="tablein"><colgroup><col style="width:20%"><col style="width:80%"></colgroup> <tbody><tr> <td bgcolor= "#717171"><font color="white">Name</font></td><td></td></tr><tr> <td bgcolor= "#717171"><font color="white">Address<br><br><br>City, State, Zip</font></td><td></td></tr>' + accounts + '</tbody></table></td><td><b>Mail to:</b><br>' + bankName + '<br>' + obj["address1"] + '<br>' + obj["address2"] + '<br>' + obj["city"] + "," + obj["state"] + obj["zip"] + '<br></td></tr></tbody></table>');  
+          return;
+        }
       var phoneNumber = obj["phoneNumber"];
       var onlineWebsite = obj["onlineWebsite"];
       var whoProvidingNotice = obj["whoProvidingNotice"];
