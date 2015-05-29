@@ -1259,18 +1259,6 @@
 								}
 							}
 						}
-					
-						$('#myform').validate({
-					        rules: {
-					            information : {
-					               required: true,
-					               minlength: 5,  // at least two checkboxes are required
-					                maxlength: 5 // less than 5 checkboxes are required
-					               // rangelength: [2,4] // must select 2, 3, or 4 checkboxes
-					            }
-					        }
-					    });
-					
 					});
 
 	function storeValues(form) {
