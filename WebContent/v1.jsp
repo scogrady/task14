@@ -1262,7 +1262,6 @@
 					});
 
 	function storeValues(form) {
-		validateForm();
 		
 		var informationList = [];
 		$.each($("input[name='information']:checked"), function() {
@@ -1342,15 +1341,6 @@
 		} 
 		}*/
 		return "";
-	}
-	
-	function validateForm() {
-	    var x = $("name='bankName'").val();
-	    alert(x);
-	    if (x == null || x == "") {
-	        alert("Name must be filled out");
-	        return false;
-	    }
 	}
 </script>
 </html>
