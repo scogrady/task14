@@ -328,11 +328,21 @@ public class UploadServlet extends HttpServlet {
 				"willApplyToEveryoneOnAccount",
 				"willApplyToEveryoneOnAccountUnlessYouTellOtherwise",
 				eElement, SingleOptionNode));
-		bean.setField38(eElement.getElementsByTagName("nonAffiliates").item(0)
+		bean.setField38(eElement.getElementsByTagName("affiliatesName").item(0)
 				.getTextContent());
-		bean.setField39(eElement.getElementsByTagName("jointMarketing").item(0)
+		bean.setField39(eElement.getElementsByTagName("affiliatesList1").item(0)
 				.getTextContent());
-		bean.setField40(eElement.getElementsByTagName("otherInfo").item(0)
+		bean.setField40(eElement.getElementsByTagName("affiliatesList2").item(0)
+				.getTextContent());
+		bean.setField41(eElement.getElementsByTagName("affiliatesList3").item(0)
+				.getTextContent());
+		bean.setField42(eElement.getElementsByTagName("nonAffiliates").item(0)
+				.getTextContent());
+		bean.setField43(getFieldof2Lengths("jointMkt", 2, "jointMktyes", "jointMktno", eElement,
+				SingleOptionNode));
+		bean.setField44(eElement.getElementsByTagName("jointMarketing").item(0)
+				.getTextContent());
+		bean.setField45(eElement.getElementsByTagName("otherInfo").item(0)
 				.getTextContent());
 		return bean;
 	}
