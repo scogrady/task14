@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1141,9 +1141,9 @@
 			</form>
 
 			<form method="post" action="UploadServlet"
-				enctype="multipart/form-data">
+				enctype="multipart/form-data" style="float: right; margin-top: -80px">
 				<div class="form-group col-md-12">
-					<br /> <label for="name">Select old file to upload:</label><input
+					<br /> <label for="name">Select file to upload:</label><input
 						class="btn btn-default " type="file" name="file" size="60" /><br />
 					<br /> <input class="btn btn-default " type="submit"
 						value="Upload" />
@@ -1179,14 +1179,14 @@
 			});
 
 	$('input.5checkbox').on('change', function(e) {
-		if ($('input[type=checkbox]:checked').length > 5) {
+		if ($('input.5checkbox[type=checkbox]:checked').length > 5) {
 			$(this).prop('checked', false);
 			alert("You can only select 5");
 		}
 	});
 	
 	  $('input.6checkbox').on('change', function(e) {
-	        if ($('input[type=checkbox]:checked').length > 5) {
+	        if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
 	            $(this).prop('checked', false);
 	            alert("You can only select 5");
 	        }
@@ -1318,6 +1318,7 @@
 			jointMarketing : form.jointMarketing.value,
 			otherInfo : form.otherInfo.value
 		}));
+		window.open("privacyForm.html");
 		return true;
 	}
 
@@ -1326,7 +1327,7 @@
 		d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
 		var expires = "expires=" + d.toGMTString();
 		document.cookie = cname + "=" + cvalue + "; " + expires;
-		getCookie("form");
+		//getCookie("form");
 	}
 
 	function getCookie(cname) {
