@@ -63,94 +63,113 @@
 			<form class="form-inline" method="POST" onsubmit="storeValues(this)">
 				<div class="form-group col-md-12">
 					<br /> <br />
+				</div>
+				<div class="form-group col-md-12">
+					<br /> <label><span class="star"> * </span>Mail-in form </label>
+				</div>
 
-					<div class="form-group col-md-12">
-						<br /> <label><span class="star"> * </span>Mail-in form </label>
+				<div class="form-group col-md-12">
+					<br />
+
+					<!--finance institution name-->
+					<div class="col-md-2">
+						<label for="name"><span class="star"> * </span>Name of
+							financial institution </label>
 					</div>
-					<div class="form-group col-md-12">
-						<div class="col-md-10">
-							<label for="name">Apply my choices only to me <span
-								class="glyphicon glyphicon-info-sign" id="popoverData5" href="#"
-								data-content="If you have a joint account, your choice(s) will apply to everyone on your account unless you mark."
-								data-placement="right" data-trigger="hover"></span>
-							</label>
-						</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							id="name" name="bankName" value="${mybean.field2}" required />
 					</div>
-
-					<div class="col-md-12">
-						<div class="col-md-3">
-							<input type="radio" name="applyChoices" value="yes"
-								${mybean.field1[0]} /> Yes
-						</div>
-						<div class="col-md-3">
-							<input type="radio" name="applyChoices" value="no" ${mybean.field1[1]}/> No
-						</div>
+				</div>
+				<div class="form-group col-md-12">
+					<div class="col-md-10">
+						<label for="name"><span class="star"> * </span>Apply my choices only to me <span
+							class="glyphicon glyphicon-info-sign" id="popoverData5" href="#"
+							data-content="If you have a joint account, your choice(s) will apply to everyone on your account unless you mark."
+							data-placement="right" data-trigger="hover"></span>
+						</label>
 					</div>
+				</div>
 
-					<div class="form-group col-md-12">
-						<br />
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<input type="radio" name="applyChoices" value="yes" checked="checked"
+							${mybean.field1[0]} /> Yes
+					</div>
+					<div class="col-md-3">
+						<input type="radio" name="applyChoices" value="no"
+							${mybean.field1[1]} /> No
+					</div>
+				</div>
 
-						<!--website-->
-						<div class="col-md-2">
-							<label for="name">Address 1 </label>
-						</div>
-						<div class="col-md-10">
-							<input size="80" maxlength="64" type="text" class="form-control"
-								name="address1" value="${mybean.field2}" required/>
-						</div>
+				<div class="form-group col-md-12">
+					<br />
 
-						<br>
-						<div class="col-md-2">
-							<br> <label for="name">Address 2 </label>
-						</div>
-						<div class="col-md-10">
-							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="address2" value="${mybean.field3}" required/>
-						</div>
-
-						<div class="col-md-2">
-							<br> <label for="name">City </label>
-						</div>
-						<div class="col-md-10">
-							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="city" value="${mybean.field4}" required/>
-						</div>
-
-						<div class="col-md-2">
-							<br> <label for="name">State </label>
-						</div>
-						<div class="col-md-10">
-							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="state" value="${mybean.field5}" required/>
-						</div>
-
-						<div class="col-md-2">
-							<br> <label for="name">Zip code </label>
-						</div>
-						<div class="col-md-10">
-							<br> <input size="80" maxlength="64" type="text"
-								class="form-control" name="zip" value="${mybean.field6}" required/>
-						</div>
-
+					<!--website-->
+					<div class="col-md-2">
+						<label for="name"><span class="star"> * </span>Address 1 </label>
+					</div>
+					<div class="col-md-10">
+						<input size="80" maxlength="64" type="text" class="form-control"
+							name="address1" value="${mybean.field2}" required />
 					</div>
 
-					<div class="form-group col-md-12">
-						<div class="col-md-10">
-							<label for="name">Account Number </label>
-						</div>
+					<br>
+					<div class="col-md-2">
+						<br> <label for="name">Address 2 </label>
+					</div>
+					<div class="col-md-10">
+						<br> <input size="80" maxlength="64" type="text"
+							class="form-control" name="address2" value="${mybean.field3}"
+							 />
 					</div>
 
-					<div class="col-md-12">
-						<div class="col-md-3">
-							<input type="radio" name="accountNumber" value="yes"
-								${mybean.field7[0]} /> Yes
-						</div>
-						<div class="col-md-3">
-							<input type="radio" name="accountNumber" value="no" ${mybean.field7[1]}/> No
-						</div>
-					</div> 
+					<div class="col-md-2">
+						<br> <label for="name"><span class="star"> * </span>City </label>
+					</div>
+					<div class="col-md-10">
+						<br> <input size="80" maxlength="64" type="text"
+							class="form-control" name="city" value="${mybean.field4}"
+							required />
+					</div>
 
-					<div class="form-group col-md-12">
+					<div class="col-md-2">
+						<br> <label for="name"><span class="star"> * </span>State </label>
+					</div>
+					<div class="col-md-10">
+						<br> <input size="80" maxlength="64" type="text"
+							class="form-control" name="state" value="${mybean.field5}"
+							required />
+					</div>
+
+					<div class="col-md-2">
+						<br> <label for="name"><span class="star"> * </span>Zip code </label>
+					</div>
+					<div class="col-md-10">
+						<br> <input size="80" maxlength="64" type="text"
+							class="form-control" name="zip" value="${mybean.field6}" required />
+					</div>
+
+				</div>
+
+				<div class="form-group col-md-12">
+					<div class="col-md-10">
+						<label for="name"><span class="star"> * </span>Account Number </label>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<input type="radio" name="accountNumber" value="yes" checked="checked"
+							${mybean.field7[0]} /> Yes
+					</div>
+					<div class="col-md-3">
+						<input type="radio" name="accountNumber" value="no"
+							${mybean.field7[1]} /> No
+					</div>
+				</div>
+
+				<div class="form-group col-md-12">
 					<br /> <br />
 					<!--other important information-->
 					<div class="col-md-3" style="text-align: center">
@@ -158,25 +177,29 @@
 					</div>
 
 					<div class="col-md-3" style="text-align: center">
-						<input type="submit" name="button" class="btn btn-default"
-							value="Save As XMl" formaction="DownloadServlet" />
+						<input type="button" name="button" class="btn btn-default"
+							value="Save As XML" formaction="DownloadServlet" />
 					</div>
 					<input type="hidden" id="thisField" name="version" value="1">
 
 					<div class="col-md-2" style="text-align: center">
-						<button type="reset" value="Reset" class="btn btn-default " onclick="this.form.reset();">Reset</button>
+						<button type="reset" value="Reset" class="btn btn-default "
+							onclick="this.form.reset();">Reset</button>
 					</div>
 
 
 				</div>
-
 			</form>
 
-			<form style="float: right; margin-top: -40px"method="post" action="UploadServlet"
-				enctype="multipart/form-data">
-				Select xml file to upload: <input class="btn btn-file" type="file" name="file" /><br />
-				<br /> <input class="btn btn-default" type="submit" value="Upload" />
-			</form>
+            <form method="post" action="UploadServlet"
+                enctype="multipart/form-data" style="float: right; margin-top: -80px">
+                <div class="form-group col-md-12">
+                    <br /> <label for="name">Select file to upload:</label><input
+                        class="btn btn-default " type="file" name="file" size="60" /><br />
+                    <br /> <input class="btn btn-default " type="submit"
+                        value="Upload" />
+                </div>
+            </form>
 		</div>
 
 	</div>
@@ -191,34 +214,32 @@
 	$('#popoverData3').popover();
 	$('#popoverData4').popover();
 
-	
-	
 	$("input[name^='r']").click(function() {
 
-	    var test = $(this).val();
-	    //alert(test.substring(0,1));
+		var test = $(this).val();
+		//alert(test.substring(0,1));
 
-	    $("div.desc" + test.substring(0,1)).hide();
+		$("div.desc" + test.substring(0, 1)).hide();
 
-	    $("#r" + test).show();
-	 });
-	
+		$("#r" + test).show();
+	});
 
-	$("input[name='qf']").click(function() {
+	$("input[name='qf']").click(
+			function() {
 
-	    // var test = $(this).val();
-	    // //alert(test.substring(0,1));
+				// var test = $(this).val();
+				// //alert(test.substring(0,1));
 
-	    // $("div.qf" + test).hide();
+				// $("div.qf" + test).hide();
 
-	    //$("#r" + test).show();
+				//$("#r" + test).show();
 
-	    $('#qfShow').css('display', ($(this).val() === 'qfyes') ? 'block' : 'none');
-	 });
-	
+				$('#qfShow').css('display',
+						($(this).val() === 'qfyes') ? 'block' : 'none');
+			});
 
-
-	$(document).ready(
+	$(document)
+			.ready(
 					function() {
 						var max_fields = 10; //maximum input boxes allowed
 						var wrapper = $(".input_fields_wrap"); //Fields wrapper
@@ -246,32 +267,33 @@
 
 	function storeValues(form) {
 		var informationList = [];
-        $.each($("input[name='information']:checked"), function(){            
-        	informationList.push($(this).val());
-        });
-        var info = informationList.join("#");
-        //alert(info);
-        
-        var informationWhen = [];
-        $.each($("input[name='informationWhen']:checked"), function(){            
-        	informationWhen.push($(this).val());
-        });
-        var infoWhn = informationWhen.join("#");
-        //alert(infoWhn);
-        
-        //alert("My favourite sports are: " + favorite.join(", "));
+		$.each($("input[name='information']:checked"), function() {
+			informationList.push($(this).val());
+		});
+		var info = informationList.join("#");
+		//alert(info);
+
+		var informationWhen = [];
+		$.each($("input[name='informationWhen']:checked"), function() {
+			informationWhen.push($(this).val());
+		});
+		var infoWhn = informationWhen.join("#");
+		//alert(infoWhn);
+
+		//alert("My favourite sports are: " + favorite.join(", "));
 
 		setCookie("form", JSON.stringify({
 			version : "4",
-			 applyChoices : form.applyChoices.value,
-	            address1 : form.address1.value,
-	            address2 : form.address2.value,
-	            city : form.city.value,
-	            state : form.state.value,
-	            zip : form.zip.value,
-	            accountNumber : form.accountNumber.value
+			bankName : form.bankName.value,
+			applyChoices : form.applyChoices.value,
+			address1 : form.address1.value,
+			address2 : form.address2.value,
+			city : form.city.value,
+			state : form.state.value,
+			zip : form.zip.value,
+			accountNumber : form.accountNumber.value
 		}));
-        window.open("privacyForm.html");
+		window.open("privacyForm.html");
 		return true;
 	}
 
@@ -288,12 +310,12 @@
 		var ca = document.cookie;
 		/* for (var i = 0; i < ca.length; i++) {
 			var c = ca[i]; */
-			//alert("c: " + ca);
-			/* while (c.charAt(0) == ' ')
-				c = c.substring(1);
-			if (c.indexOf(name) == 0) {
-				return c.substring(name.length, c.length);
-			} 
+		//alert("c: " + ca);
+		/* while (c.charAt(0) == ' ')
+			c = c.substring(1);
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		} 
 		}*/
 		return "";
 	}
