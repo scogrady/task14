@@ -469,7 +469,7 @@ public class UploadServlet extends HttpServlet {
 				SingleOptionNode));
 		bean.setField14(getFieldof2Lengths("r52", 2, "yes", "no", eElement,
 				SingleOptionNode));
-		bean.setField16(getFieldof2Lengths("qf", 2, "qfyes", "qfno", eElement,
+		bean.setField15(getFieldof2Lengths("qf", 2, "qfyes", "qfno", eElement,
 				SingleOptionNode));
 		bean.setField16(getFieldof2Lengths("r61", 2, "61yes", "61no", eElement,
 				SingleOptionNode));
