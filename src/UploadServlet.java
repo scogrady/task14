@@ -166,7 +166,6 @@ public class UploadServlet extends HttpServlet {
 				Node nNode = nList.item(temp);
 
 				System.out.println("\nCurrent Element :" + nNode.getNodeName());
-				System.out.println("No:" + nNode.getNodeValue());
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
