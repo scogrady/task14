@@ -165,6 +165,7 @@ public class DownloadServlet extends HttpServlet {
 						request));
 				version.appendChild(attachSingleChild(doc, "nonAffiliates",
 						request));
+				appendMultipleChild(doc, version, request, "jointMkt");
 				version.appendChild(attachSingleChild(doc, "jointMarketing",
 						request));
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));

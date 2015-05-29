@@ -1228,7 +1228,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
 								id="nonAffiliates" name="nonAffiliates"><c:out
-									value="${mybean.field32}" /></textarea>
+									value="${mybean.field41}" /></textarea>
 						</div>
 					</div>
 				</div>
