@@ -88,7 +88,7 @@ public class UploadServlet extends HttpServlet {
 		information.put("purchaseHistory",11);
 		information.put("medicalInformation",12);
 		information.put("overdraftHistory",13);
-		information.put("purchaseHistory",14);
+		information.put("wireTransferInstructions",14);
 		information.put("accountTransactions",15);
 		information.put("riskTolerance",16);
 		information.put("medical-relatedDebts",17);
@@ -97,7 +97,6 @@ public class UploadServlet extends HttpServlet {
 		information.put("retirementAssets",20);
 		information.put("checkingAccountInformation",21);
 		information.put("employmentInformation",22);
-		information.put("wireTransferInstructions",23);
 
 
 	}
@@ -166,7 +165,6 @@ public class UploadServlet extends HttpServlet {
 				Node nNode = nList.item(temp);
 
 				System.out.println("\nCurrent Element :" + nNode.getNodeName());
-				System.out.println("No:" + nNode.getNodeValue());
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -328,11 +326,21 @@ public class UploadServlet extends HttpServlet {
 				"willApplyToEveryoneOnAccount",
 				"willApplyToEveryoneOnAccountUnlessYouTellOtherwise",
 				eElement, SingleOptionNode));
-		bean.setField38(eElement.getElementsByTagName("nonAffiliates").item(0)
+		bean.setField38(eElement.getElementsByTagName("affiliatesName").item(0)
 				.getTextContent());
-		bean.setField39(eElement.getElementsByTagName("jointMarketing").item(0)
+		bean.setField39(eElement.getElementsByTagName("affiliatesList1").item(0)
 				.getTextContent());
-		bean.setField40(eElement.getElementsByTagName("otherInfo").item(0)
+		bean.setField40(eElement.getElementsByTagName("affiliatesList2").item(0)
+				.getTextContent());
+		bean.setField41(eElement.getElementsByTagName("affiliatesList3").item(0)
+				.getTextContent());
+		bean.setField42(eElement.getElementsByTagName("nonAffiliates").item(0)
+				.getTextContent());
+		bean.setField43(getFieldof2Lengths("jointMkt", 2, "jointMktyes", "jointMktno", eElement,
+				SingleOptionNode));
+		bean.setField44(eElement.getElementsByTagName("jointMarketing").item(0)
+				.getTextContent());
+		bean.setField45(eElement.getElementsByTagName("otherInfo").item(0)
 				.getTextContent());
 		return bean;
 	}
@@ -427,13 +435,24 @@ public class UploadServlet extends HttpServlet {
 				"will apply to everyone on account",
 				"will apply to everyone on account unless you tell otherwise",
 				eElement, SingleOptionNode));
-		bean.setField31(eElement.getElementsByTagName("affiliates").item(0)
+		bean.setField31(eElement.getElementsByTagName("affiliatesName").item(0)
 				.getTextContent());
-		bean.setField32(eElement.getElementsByTagName("nonAffiliates").item(0)
+		bean.setField32(eElement.getElementsByTagName("affiliatesList1").item(0)
 				.getTextContent());
-		bean.setField33(eElement.getElementsByTagName("jointMarketing").item(0)
+		bean.setField33(eElement.getElementsByTagName("affiliatesList2").item(0)
 				.getTextContent());
-		bean.setField34(eElement.getElementsByTagName("otherInfo").item(0)
+		bean.setField34(eElement.getElementsByTagName("affiliatesList3").item(0)
+				.getTextContent());
+		bean.setField35(eElement.getElementsByTagName("nonAffiliates").item(0)
+				.getTextContent());
+		bean.setField36(getFieldof2Lengths(
+				"jointMkt", 2,
+				"jointMktyes",
+				"jointMktno",
+				eElement, SingleOptionNode));
+		bean.setField37(eElement.getElementsByTagName("jointMarketing").item(0)
+				.getTextContent());
+		bean.setField38(eElement.getElementsByTagName("otherInfo").item(0)
 				.getTextContent());
 		return bean;
 	}
@@ -469,7 +488,7 @@ public class UploadServlet extends HttpServlet {
 				SingleOptionNode));
 		bean.setField14(getFieldof2Lengths("r52", 2, "yes", "no", eElement,
 				SingleOptionNode));
-		bean.setField16(getFieldof2Lengths("qf", 2, "qfyes", "qfno", eElement,
+		bean.setField15(getFieldof2Lengths("qf", 2, "qfyes", "qfno", eElement,
 				SingleOptionNode));
 		bean.setField16(getFieldof2Lengths("r61", 2, "61yes", "61no", eElement,
 				SingleOptionNode));

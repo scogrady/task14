@@ -155,10 +155,17 @@ public class DownloadServlet extends HttpServlet {
 				appendMultipleChild(doc, version, request, "q10");
 				version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
 						request));
-				version.appendChild(attachSingleChild(doc, "affiliates",
+				version.appendChild(attachSingleChild(doc, "affiliatesName",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList1",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList2",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList3",
 						request));
 				version.appendChild(attachSingleChild(doc, "nonAffiliates",
 						request));
+				appendMultipleChild(doc, version, request, "jointMkt");
 				version.appendChild(attachSingleChild(doc, "jointMarketing",
 						request));
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));
@@ -210,10 +217,17 @@ public class DownloadServlet extends HttpServlet {
 				appendMultipleChild(doc, version, request, "q10");
 				version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
 						request));
-				version.appendChild(attachSingleChild(doc, "affiliates",
+				version.appendChild(attachSingleChild(doc, "affiliatesName",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList1",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList2",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList3",
 						request));
 				version.appendChild(attachSingleChild(doc, "nonAffiliates",
 						request));
+				appendMultipleChild(doc, version, request, "jointMkt");
 				version.appendChild(attachSingleChild(doc, "jointMarketing",
 						request));
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));
