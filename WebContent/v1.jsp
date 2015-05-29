@@ -199,7 +199,7 @@
 
 						<div class="col-md-3">
 							<input class="5checkbox" type="checkbox" name="information"
-								value="wireTransferInstructions" ${mybean.field3[23]} /> <label
+								value="wireTransferInstructions" ${mybean.field3[14]} /> <label
 								for="income">Wire Transfer Instructions</label>
 						</div>
 
