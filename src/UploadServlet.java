@@ -223,6 +223,8 @@ public class UploadServlet extends HttpServlet {
 	private MyBeanV4 processVersion4(Element eElement) {
 		NodeList SingleOptionNode = null;
 		MyBeanV4 bean = new MyBeanV4();
+		bean.setField8(eElement.getElementsByTagName("bankName").item(0)
+				.getTextContent());
 		bean.setField1(getFieldof2Lengths("applyChoices", 2, "yes", "no",
 				eElement, SingleOptionNode));
 		bean.setField2(eElement.getElementsByTagName("address1").item(0)

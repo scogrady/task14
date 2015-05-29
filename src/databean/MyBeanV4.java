@@ -13,6 +13,7 @@ public class MyBeanV4 {
 	private String field5;
 	private String field6;
 	private String[] field7;
+	private String field8;
 	public String[] getField1() {
 		return field1;
 	}
@@ -54,6 +55,12 @@ public class MyBeanV4 {
 	}
 	public void setField7(String[] field7) {
 		this.field7 = field7;
+	}
+	public String getField8() {
+		return field8;
+	}
+	public void setField8(String field8) {
+		this.field8 = field8;
 	}
 	
 }

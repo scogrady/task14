@@ -219,6 +219,7 @@ public class DownloadServlet extends HttpServlet {
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));
 
 			} else if (request.getParameter("version").equals("4")) {
+				version.appendChild(attachSingleChild(doc, "bankName", request));
 				appendMultipleChild(doc, version, request, "applyChoices");
 				version.appendChild(attachSingleChild(doc, "address1", request));
 				version.appendChild(attachSingleChild(doc, "address2", request));

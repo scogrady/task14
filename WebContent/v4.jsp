@@ -78,7 +78,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value="${mybean.field2}" required />
+							id="name" name="bankName" value="${mybean.field8}" required />
 					</div>
 				</div>
 				<div class="form-group col-md-12">
@@ -180,7 +180,7 @@
 						<input type="submit" name="button" class="btn btn-default"
 							value="Save As XML" formaction="DownloadServlet" />
 					</div>
-					<input type="hidden" id="thisField" name="version" value="1">
+					<input type="hidden" id="thisField" name="version" value="4">
 
 					<div class="col-md-2" style="text-align: center">
 						<button type="reset" value="Reset" class="btn btn-default "
