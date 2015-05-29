@@ -964,7 +964,7 @@
 					</div>
 
 					<div class="col-md-12">
-						<br /> <input type="radio" name="q10"
+						<br /> <input type="radio" name="q10" checked="checked"
 							value="informationFromOtherCompanies" ${mybean.field24[0]} />
 						<label for="income">Collect personal information from
 							other companies</label>
@@ -1098,7 +1098,7 @@
 						</div>
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
-								id="jointMarketing" name="jointMarketing" required><c:out
+								id="jointMarketing" name="jointMarketing" ><c:out
 									value="${mybean.field32}" /></textarea>
 
 						</div>
