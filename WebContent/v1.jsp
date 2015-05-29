@@ -84,7 +84,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value="${mybean.field2}" required />
+							id="name" name="bankName" value="${mybean.field2}" required/>
 					</div>
 				</div>
 
@@ -623,7 +623,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="phone" name="phoneNumber" value="${mybean.field20}" required />
+							id="phone" name="phoneNumber" value="${mybean.field20}" required/>
 					</div>
 				</div>
 
@@ -638,7 +638,7 @@
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
 							id="website" name="onlineWebsite" value="${mybean.field21}"
-							required />
+							/>
 					</div>
 				</div>
 
@@ -986,7 +986,7 @@
 
 						<textarea class="form-control" rows="3" cols="80"
 							id="whyCantLimitShare" name="whyCantLimitShare"
-							required="required"><c:out value="${mybean.field25}" /></textarea>
+							><c:out value="${mybean.field25}" /></textarea>
 					</div>
 				</div>
 
@@ -1262,6 +1262,8 @@
 					});
 
 	function storeValues(form) {
+		validateForm();
+		
 		var informationList = [];
 		$.each($("input[name='information']:checked"), function() {
 			informationList.push($(this).val());
@@ -1340,6 +1342,15 @@
 		} 
 		}*/
 		return "";
+	}
+	
+	function validateForm() {
+	    var x = $("name='bankName'").val();
+	    alert(x);
+	    if (x == null || x == "") {
+	        alert("Name must be filled out");
+	        return false;
+	    }
 	}
 </script>
 </html>
