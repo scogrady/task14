@@ -85,7 +85,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" required value="${mybean.field2}" />
+							id="name" name="bankName" value="${mybean.field2}" required/>
 					</div>
 				</div>
 
@@ -96,7 +96,12 @@
 					<div class="col-md-12">
 						<label for="name_of_financial_institation"><span
 							class="star"> * </span>What type of information to collect? (You
-							must select 5 of the following terms.)</label>
+							must select 5 of the following terms.)<span
+							class="glyphicon glyphicon-info-sign" id="popoverData5"
+							data-content=" All institutions must use 'Social Security number' as information and select 5 others  
+							 from the selection provided, by click repective check boxes"
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 
 					<div class="col-md-12">
@@ -280,8 +285,11 @@
 
 					<!--phone-->
 					<div class="col-md-10">
-						<label for="name"><span class="star"> * </span>Whose
-							information to share? </label>
+						<label for="name"><span class="star"> * </span>How do you want to denote your client as in the form?<span
+							class="glyphicon glyphicon-info-sign" id="popoverData6"
+							data-content=" You can choose to denote your client(for whom form is being designed) as 1) Customer or as 2) Member"
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span>  </label>
 					</div>
 
 
@@ -351,7 +359,7 @@
 					<div class="col-md-12">
 						<br /> <label>b. For our marketing purpose <span
 							class="glyphicon glyphicon-info-sign" id="popoverData2" href="#"
-							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							data-content="To offer product and services to you"
 							rel="popover" data-placement="right" data-trigger="hover"></span></label>
 					</div>
 
@@ -429,10 +437,10 @@
 
 
 					<div class="col-md-12">
-						<br /> <label>d. For our affiliats' everyday business
+						<br /> <label>d. For our affiliates' everyday business
 							purposes <span class="glyphicon glyphicon-info-sign"
 							id="popoverData3" href="#"
-							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							data-content="Information about your transaction and experiences"
 							rel="popover" data-placement="right" data-trigger="hover"></span>
 						</label>
 					</div>
@@ -475,7 +483,7 @@
 						<br /> <label>e. For our affiliates' everyday business
 							purposes <span class="glyphicon glyphicon-info-sign"
 							id="popoverData4" href="#"
-							data-content="Such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureus"
+							data-content="Information about your customers creditworthiness "
 							rel="popover" data-placement="right" data-trigger="hover"></span>
 						</label>
 					</div>
@@ -515,7 +523,12 @@
 
 
 					<div class="col-md-12">
-						<br /> <label>f. Do you have any affiliates?</label>
+						<br /> <label>f. Do you have any affiliates?<span
+							class="glyphicon glyphicon-info-sign" id="popoverData7"
+							data-content=" If your institution work with some affiliates,
+							 which use ur brand name etc, you should select yes in this option."
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 					<div>
 						<div class="col-md-3">
@@ -534,7 +547,12 @@
 
 						<div class="col-md-12">
 							<br /> <label for="name_of_financial_institation">For
-								our affiliates to market you</label>
+								our affiliates to market you<span
+							class="glyphicon glyphicon-info-sign" id="popoverData8"
+							data-content=" Do your aggiliates use the customers personal information , or you share your customer information with them,
+							or they can use your customer information for marketting.If any of these are yes, yu should select yes here."
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 						</div>
 
 						<div class="col-md-12">
@@ -670,7 +688,11 @@
 					<!--phone-->
 					<div class="col-md-2">
 						<label for="name"><span class="star"> * </span>Phone
-							number </label>
+							number <span
+							class="glyphicon glyphicon-info-sign" id="popoverData10"
+							data-content="Number where customer can call if he has any questions or doubts "
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
@@ -684,7 +706,11 @@
 					<!--website-->
 					<div class="col-md-2">
 						<label for="name"><span class="star"> * </span>Online
-							website </label>
+							website  <span
+							class="glyphicon glyphicon-info-sign" id="popoverData11"
+							data-content="Website where customer can check and log his FAQ's "
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
@@ -699,7 +725,11 @@
 					<br />
 					<!--who we are-->
 					<div class="col-md-2">
-						<label for="name">Who is providing this notice? </label>
+						<label for="name">Who is providing this notice?  <span
+							class="glyphicon glyphicon-info-sign" id="popoverData12"
+							data-content="Name of the institution, or list of individul institutions which form the group "
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span> </label>
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
@@ -725,7 +755,11 @@
 					<!--days-->
 					<div class="col-md-10">
 						<label for="name"><span class="star"> * </span>How to
-							collect personal information? </label>
+							collect personal information? <span
+							class="glyphicon glyphicon-info-sign" id="popoverData9"
+							data-content=" Instances where you collect information about your cliets. You have select 5 from the listed checkboxes"
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 
 					<div class="col-md-10">
@@ -1014,14 +1048,21 @@
 						<br /> <input type="radio" name="q10"
 							value="informationFromOtherCompanies" 
 							${mybean.field28[0]} checked="checked"/> <label for="income">Collect
-							personal information from other companies</label>
+							personal information from other companies<span
+							class="glyphicon glyphicon-info-sign" id="popoverData13"
+							data-content="Other companies here refer to the third parties companies which are non affiliates  "
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
 							value="informationFromCreditBureauEtc" ${mybean.field28[1]} /> <label
-							for="income">Collect personal information from others,
-							e.g. credit bureaus, affiliates, or other companies</label>
+							for="income">Collect personal information from credit bureaus, affiliates, or other companies <span
+							class="glyphicon glyphicon-info-sign" id="popoverData14"
+							data-content=" Personal information collection from the sources other than above option"
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 					</div>
 				</div>
 
@@ -1073,7 +1114,17 @@
 						<!--affiliates information-->
 						<div class="col-md-12">
 							<label for="name"><span class="star"> * </span>Affiliates
-								Information</label>
+								Information <span
+							class="glyphicon glyphicon-info-sign" id="popoverData15"
+							data-content="Here you have to fill 
+							1.Common corporate identity of financial institution 
+							2.Illustrative list of financial companies
+							3.Illustrative list of non financial companies
+							4.List of other companies
+							List all one-after-other in the given space"
+							
+							rel="popover" data-placement="right" data-trigger="hover">
+						</span></label>
 						</div>
 
 						<div class="col-md-2">
@@ -1233,6 +1284,18 @@
 	$('#popoverData2').popover();
 	$('#popoverData3').popover();
 	$('#popoverData4').popover();
+	$('#popoverData5').popover();
+	$('#popoverData6').popover();
+	$('#popoverData7').popover();
+	$('#popoverData8').popover();
+	$('#popoverData9').popover();
+	$('#popoverData10').popover();
+	$('#popoverData11').popover();
+	$('#popoverData12').popover();
+	$('#popoverData13').popover();
+	$('#popoverData14').popover();
+	$('#popoverData15').popover();
+	
 
 	$("input[name^='r']").click(function() {
 
