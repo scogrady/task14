@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 <body>
+
+<h3 style="margin-left: 100px">To download the form, please right click on the blank space of the page and use "save as" function.</h3>
+<div id="date" style="float: right; margin-top: -40px"></div>
 <table style="width:80%">
  <colgroup>
     <col style="width:20%">
@@ -304,6 +307,8 @@ together market financial products or services to you.
       }
       var cookie = document.cookie.substring(5);
       var obj = JSON.parse(cookie);
+      var date = obj["date"].split("-");
+      $("#date").html("Rev. " + date[1] + "/" + date[0]);
       var version = obj["version"];
       var bankName = obj["bankName"];
       if (version === "4") {
@@ -350,7 +355,7 @@ together market financial products or services to you.
       var jointMarketing = obj["jointMarketing"];
       var otherInfo = obj["otherInfo"];
       if (obj["r61"] == "r61no") {
-    	  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + bankName + 'has no affiliates' + '</font>');
+    	  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies. <br><li>' + bankName + 'has no affiliates' + '</font>');
       } else {
     	  if (obj["qf"] == "qfno") {
     		  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + bankName + 'does not share with our affiliates' + '</font>');

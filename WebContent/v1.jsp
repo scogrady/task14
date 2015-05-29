@@ -59,7 +59,7 @@
 
 
 		<div class="row">
-			<form class="form-inline" method="POST" onsubmit="storeValues(this)" id="myform">
+			<form class="form-inline" method="POST" onsubmit="storeValues(this)">
 				<div class="form-group col-md-12">
 					<br /> <br />
 
@@ -84,7 +84,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value="${mybean.field2}" required/>
+							id="name" name="bankName" value="${mybean.field2}" required />
 					</div>
 				</div>
 
@@ -382,8 +382,8 @@
 						</div>
 						<div id="r21yes" class="desc2">
 							<div class="col-md-1">
-								<input type="radio" name="r22" value="yes" ${mybean.field8[0]}
-									checked="checked" /> Yes
+								<input type="radio" name="r22" value="yes" ${mybean.field8[0]} />
+								Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r22" value="no" ${mybean.field8[1]} />
@@ -421,8 +421,8 @@
 						</div>
 						<div id="r31yes" class="desc3">
 							<div class="col-md-1">
-								<input type="radio" name="r32" value="yes" ${mybean.field10[0]}
-									checked="checked" /> Yes
+								<input type="radio" name="r32" value="yes" ${mybean.field10[0]} />
+								Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r32" value="no" ${mybean.field10[1]} />
@@ -464,8 +464,8 @@
 						</div>
 						<div id="r41yes" class="desc4">
 							<div class="col-md-1">
-								<input type="radio" name="r42" value="yes" ${mybean.field12[0]}
-									checked="checked" /> Yes
+								<input type="radio" name="r42" value="yes" ${mybean.field12[0]} />
+								Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r42" value="no" ${mybean.field12[1]} />
@@ -507,8 +507,8 @@
 						</div>
 						<div id="r51yes" class="desc5">
 							<div class="col-md-1">
-								<input type="radio" name="r52" value="yes" ${mybean.field14[0]}
-									checked="checked" /> Yes
+								<input type="radio" name="r52" value="yes" ${mybean.field14[0]} />
+								Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r52" value="no" ${mybean.field14[1]} />
@@ -574,8 +574,8 @@
 							</div>
 							<div id="r61yes" class="desc6">
 								<div class="col-md-1">
-									<input type="radio" name="r62" value="yes" ${mybean.field17[0]}
-										checked="checked" /> Yes
+									<input type="radio" name="r62" value="yes" ${mybean.field17[0]} />
+									Yes
 								</div>
 								<div class="col-md-1">
 									<input type="radio" name="r62" value="no" ${mybean.field17[1]} />
@@ -617,8 +617,8 @@
 						</div>
 						<div id="r71yes" class="desc7">
 							<div class="col-md-1">
-								<input type="radio" name="r72" value="yes" ${mybean.field19[0]}
-									checked="checked" /> Yes
+								<input type="radio" name="r72" value="yes" ${mybean.field19[0]} />
+								Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r72" value="no" ${mybean.field19[1]} />
@@ -629,7 +629,12 @@
 							<div class="col-md-2">We don't share</div>
 						</div>
 					</div>
+
 				</div>
+
+
+
+
 
 				<div class="form-group col-md-12">
 					<br />
@@ -645,7 +650,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="phone" name="phoneNumber" value="${mybean.field20}" required/>
+							id="phone" name="phoneNumber" value="${mybean.field20}" required />
 					</div>
 				</div>
 
@@ -664,7 +669,7 @@
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
 							id="website" name="onlineWebsite" value="${mybean.field21}"
-							/>
+							required />
 					</div>
 				</div>
 
@@ -1027,7 +1032,7 @@
 
 						<textarea class="form-control" rows="3" cols="80"
 							id="whyCantLimitShare" name="whyCantLimitShare"
-							><c:out value="${mybean.field25}" /></textarea>
+							required="required"><c:out value="${mybean.field25}" /></textarea>
 					</div>
 				</div>
 
@@ -1244,13 +1249,13 @@
 			alert("You can only select 5");
 		}
 	});
-
-	$('input.6checkbox').on('change', function(e) {
-		if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
-			$(this).prop('checked', false);
-			alert("You can only select 5");
-		}
-	});
+	
+	  $('input.6checkbox').on('change', function(e) {
+	        if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
+	            $(this).prop('checked', false);
+	            alert("You can only select 5");
+	        }
+	    });
 
 	$("input[name='r61']").click(
 			function() {
@@ -1267,11 +1272,11 @@
 			});
 
 	$("input[name='jointMkt']").click(
-			function() {
+            function() {
 
-				$('#jointMktList').css('display',
-						($(this).val() === 'jointMktyes') ? 'block' : 'none');
-			});
+                $('#jointMktList').css('display',
+                        ($(this).val() === 'jointMktyes') ? 'block' : 'none');
+            });
 
 	$(document)
 			.ready(
@@ -1325,7 +1330,6 @@
 					});
 
 	function storeValues(form) {
-		
 		var informationList = [];
 		$.each($("input[name='information']:checked"), function() {
 			informationList.push($(this).val());
