@@ -47,9 +47,12 @@ public class MyBeanV3 {
 	private String field39;
 	private String field40;
 	private String field41;
-	private String[] field42;
+	private String field42;
 	private String[] field43;
-	private String[] field44;
+	private String field44;
+	private String field45;
+	
+	
 	public String getField1() {
 		return field1;
 	}
@@ -296,10 +299,10 @@ public class MyBeanV3 {
 	public void setField41(String field41) {
 		this.field41 = field41;
 	}
-	public String[] getField42() {
+	public String getField42() {
 		return field42;
 	}
-	public void setField42(String[] field42) {
+	public void setField42(String field42) {
 		this.field42 = field42;
 	}
 	public String[] getField43() {
@@ -308,11 +311,19 @@ public class MyBeanV3 {
 	public void setField43(String[] field43) {
 		this.field43 = field43;
 	}
-	public String[] getField44() {
+	public String getField44() {
 		return field44;
 	}
-	public void setField44(String[] field44) {
+	public void setField44(String field44) {
 		this.field44 = field44;
 	}
+	public String getField45() {
+		return field45;
+	}
+	public void setField45(String field45) {
+		this.field45 = field45;
+	}
+	
+
 
 }
