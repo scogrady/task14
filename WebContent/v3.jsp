@@ -1291,7 +1291,7 @@
 						<input type="submit" name="button" class="btn btn-default"
 							value="Save As XML" formaction="DownloadServlet" />
 					</div>
-					<input type="hidden" id="thisField" name="version" value="1">
+					<input type="hidden" id="thisField" name="version" value="3">
 
 					<div class="col-md-2" style="text-align: center">
 						<button type="reset" value="Reset" class="btn btn-default "
