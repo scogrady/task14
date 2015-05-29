@@ -288,7 +288,7 @@
 		var ca = document.cookie;
 		/* for (var i = 0; i < ca.length; i++) {
 			var c = ca[i]; */
-			alert("c: " + ca);
+			//alert("c: " + ca);
 			/* while (c.charAt(0) == ' ')
 				c = c.substring(1);
 			if (c.indexOf(name) == 0) {
