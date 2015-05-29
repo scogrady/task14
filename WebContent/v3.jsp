@@ -634,7 +634,7 @@
 						<div class="col-md-10">
 							<input size="80" maxlength="64" type="text" class="form-control"
 								id="phone" name="limitSharingPhoneNumber" ${mybean.field20}
-								required />
+								/>
 						</div>
 					</div>
 
@@ -650,7 +650,7 @@
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
 							name="limitSharingOnlineWebsite" value="${mybean.field21}"
-							required />
+							 />
 					</div>
 
 					<br>
@@ -660,7 +660,7 @@
 					<div class="col-md-10">
 						<br> <input size="80" maxlength="64" type="text"
 							class="form-control" name="sharingWithinDays1"
-							value="${mybean.field22}" required />
+							value="${mybean.field22}" />
 					</div>
 				</div>
 
@@ -692,7 +692,7 @@
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
 							id="website" name="onlineWebsite" value="${mybean.field24}"
-							required />
+							 />
 					</div>
 				</div>
 
@@ -1124,7 +1124,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							name="whyCantLimitShare" required><c:out
+							name="whyCantLimitShare" ><c:out
 								value="${mybean.field36}" /></textarea>
 					</div>
 				</div>
@@ -1261,7 +1261,7 @@
 						</div>
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
-								id="jointMarketing" name="jointMarketing" required><c:out
+								id="jointMarketing" name="jointMarketing" ><c:out
 									value="${mybean.field43}" /></textarea>
 
 						</div>

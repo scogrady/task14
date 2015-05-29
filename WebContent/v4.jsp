@@ -78,7 +78,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value="${mybean.field8}" required />
+							id="name" name="bankName" value="${mybean.field8}"  />
 					</div>
 				</div>
 				<div class="form-group col-md-12">
@@ -111,7 +111,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							name="address1" value="${mybean.field2}" required />
+							name="address1" value="${mybean.field2}"  />
 					</div>
 
 					<br>
@@ -130,7 +130,7 @@
 					<div class="col-md-10">
 						<br> <input size="80" maxlength="64" type="text"
 							class="form-control" name="city" value="${mybean.field4}"
-							required />
+							 />
 					</div>
 
 					<div class="col-md-2">
@@ -139,7 +139,7 @@
 					<div class="col-md-10">
 						<br> <input size="80" maxlength="64" type="text"
 							class="form-control" name="state" value="${mybean.field5}"
-							required />
+							 />
 					</div>
 
 					<div class="col-md-2">
@@ -147,7 +147,7 @@
 					</div>
 					<div class="col-md-10">
 						<br> <input size="80" maxlength="64" type="text"
-							class="form-control" name="zip" value="${mybean.field6}" required />
+							class="form-control" name="zip" value="${mybean.field6}"  />
 					</div>
 
 				</div>
