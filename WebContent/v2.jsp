@@ -630,7 +630,7 @@
 						</div>
 						<div class="col-md-10">
 							<input size="80" maxlength="64" type="text" class="form-control"
-								id="phone" name="limitSharingPhoneNumber" ${mybean.field20}
+								id="phone" name="limitSharingPhoneNumber" value="${mybean.field20}"
 								required />
 						</div>
 					</div>
@@ -743,8 +743,8 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="depositMoney" /> <label for="income"
-								${mybean.field27[1]}>Deposit money</label>
+								value="depositMoney" ${mybean.field27[1]}/> <label for="income"
+								>Deposit money</label>
 						</div>
 
 						<div class="col-md-6">
@@ -789,15 +789,15 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payInsurancePremium" /> <label for="income"
-								${mybean.field27[7]}>Pay insurance premiums</label>
+								value="payInsurancePremium" ${mybean.field27[7]}/> <label for="income"
+								>Pay insurance premiums</label>
 						</div>
 
 						<div class="col-md-6">
 
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="directUsSellSecurities" /> <label for="income"
-								${mybean.field27[8]}>Direct us to sell your securities</label>
+								value="directUsSellSecurities" ${mybean.field27[8]}/> <label for="income"
+								>Direct us to sell your securities</label>
 
 						</div>
 					</div>
@@ -915,8 +915,8 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="tellAboutInvestmentRetirementPortfolio" /> <label
-								for="income" ${mybean.field27[23]}>Tell us about your
+								value="tellAboutInvestmentRetirementPortfolio"  ${mybean.field27[23]}/> <label
+								for="income">Tell us about your
 								investment or retirement portfolio</label>
 
 						</div>
@@ -927,8 +927,8 @@
 						<br />
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payUsByCheck" /> <label for="income"
-								${mybean.field27[24]}>Pay us by check</label>
+								value="payUsByCheck" ${mybean.field27[24]}/> <label for="income"
+								>Pay us by check</label>
 						</div>
 
 						<div class="col-md-3">
@@ -990,8 +990,8 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="showGovernmentIssuedId" /> <label for="income"
-								${mybean.field27[32]}>Show your government-issued ID</label>
+								value="showGovernmentIssuedId" ${mybean.field27[32]}/> <label for="income"
+								>Show your government-issued ID</label>
 
 						</div>
 					</div>
@@ -1012,8 +1012,8 @@
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
-							value="informationFromOtherCompanies" checked="checked"
-							${mybean.field28[0]} /> <label for="income">Collect
+							value="informationFromOtherCompanies" 
+							${mybean.field28[0]} checked="checked"/> <label for="income">Collect
 							personal information from other companies</label>
 					</div>
 
@@ -1051,8 +1051,8 @@
 					<div class="col-md-12">
 						<br /> <input type="radio"
 							name="whtHappensLimitSharingJointAccount"
-							value="will apply to everyone on account" checked="checked"
-							${mybean.field30[0]} /> <label for="income">Your choices
+							value="will apply to everyone on account" 
+							${mybean.field30[0]} checked="checked"/> <label for="income">Your choices
 							will apply to everyone on your account.</label>
 					</div>
 
@@ -1152,7 +1152,7 @@
 
 					<div class="col-md-3">
 						<input type="radio" id="yes" name="jointMkt" value="jointMktyes"
-							checked="checked" ${mybean.field36[0]} checked="checked" />Yes
+							 ${mybean.field36[0]} checked="checked" />Yes
 					</div>
 					<div class="col-md-3">
 						<input type="radio" id="no" name="jointMkt" value="jointMktno"

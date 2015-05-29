@@ -682,7 +682,7 @@
 					</div>
 
 
-					<div class="col-md-12">
+						<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
@@ -692,8 +692,8 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="depositMoney" /> <label for="income"
-								${mybean.field23[1]}>Deposit money</label>
+								value="depositMoney" ${mybean.field23[1]}/> <label for="income"
+								>Deposit money</label>
 						</div>
 
 						<div class="col-md-6">
@@ -738,15 +738,15 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payInsurancePremium" /> <label for="income"
-								${mybean.field23[7]}>Pay insurance premiums</label>
+								value="payInsurancePremium" ${mybean.field23[7]}/> <label for="income"
+								>Pay insurance premiums</label>
 						</div>
 
 						<div class="col-md-6">
 
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="directUsSellSecurities" /> <label for="income"
-								${mybean.field23[8]}>Direct us to sell your securities</label>
+								value="directUsSellSecurities" ${mybean.field23[8]}/> <label for="income"
+								>Direct us to sell your securities</label>
 
 						</div>
 					</div>
@@ -864,8 +864,8 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="tellAboutInvestmentRetirementPortfolio" /> <label
-								for="income" ${mybean.field23[23]}>Tell us about your
+								value="tellAboutInvestmentRetirementPortfolio"  ${mybean.field23[23]}/> <label
+								for="income">Tell us about your
 								investment or retirement portfolio</label>
 
 						</div>
@@ -876,8 +876,8 @@
 						<br />
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payUsByCheck" /> <label for="income"
-								${mybean.field23[24]}>Pay us by check</label>
+								value="payUsByCheck" ${mybean.field23[24]}/> <label for="income"
+								>Pay us by check</label>
 						</div>
 
 						<div class="col-md-3">
@@ -939,8 +939,8 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="showGovernmentIssuedId" /> <label for="income"
-								${mybean.field23[32]}>Show your government-issued ID</label>
+								value="showGovernmentIssuedId" ${mybean.field23[32]}/> <label for="income"
+								>Show your government-issued ID</label>
 
 						</div>
 					</div>
