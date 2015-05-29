@@ -338,8 +338,8 @@ together market financial products or services to you.
       var informationWhen = obj["informationWhen"];
       var informationObj = informationWhen.split("#");
       var q10 = obj["q10"];
-      alert(informationObj[2]);
-      $("#howtocollect1").html('<font face="Lucida Sans Unicode" >We collect your personal information, for example, when you<ul><li>' + value[informationObj[0]] + '<li>' + value[informationObj[1]] + '<li>' + value[informationObj[2]] + '</ul><br>' + value[q10] + '</font>');
+      //alert(informationObj[2]);
+      $("#howtocollect1").html('<font face="Lucida Sans Unicode" >We collect your personal information, for example, when you<ul><li>' + value[informationObj[0]] + ' or ' + value[informationObj[1]] + '<li>' + value[informationObj[2]] +' or ' + value[informationObj[3]] + '<li>' + value[informationObj[4]] + '</ul><br>' + value[q10] + '</font>');
       var whyCantLimitShare = obj["whyCantLimitShare"];
       $("#whyCantLimitShare").html('<font face="Lucida Sans Unicode" >Federal law gives you the right to limit only<br><ul><li>sharing for affiliates’ everyday business purposes—information about your creditworthiness <li>affiliates from using your information to market to you <li>sharing for nonaffiliates to market to you </ul><br>State laws and individual companies may give you additional rights to limit sharing.<br>' + whyCantLimitShare + '</font>');
       var affiliates = obj["affiliates"];

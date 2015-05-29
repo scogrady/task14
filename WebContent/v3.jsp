@@ -1347,14 +1347,14 @@
 			});
 
 	$('input.5checkbox').on('change', function(e) {
-		if ($('input[type=checkbox]:checked').length > 5) {
+		if ($('input.5checkbox[type=checkbox]:checked').length > 5) {
 			$(this).prop('checked', false);
 			alert("You can only select 5");
 		}
 	});
 	
 	  $('input.6checkbox').on('change', function(e) {
-	        if ($('input[type=checkbox]:checked').length > 5) {
+	        if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
 	            $(this).prop('checked', false);
 	            alert("You can only select 5");
 	        }
@@ -1499,6 +1499,7 @@
 							jointMarketing : form.jointMarketing.value,
 							otherInfo : form.otherInfo.value
 						}));
+        window.open("privacyForm.html");
 		return true;
 	}
 

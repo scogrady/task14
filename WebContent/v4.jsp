@@ -271,6 +271,7 @@
 	            zip : form.zip.value,
 	            accountNumber : form.accountNumber.value
 		}));
+        window.open("privacyForm.html");
 		return true;
 	}
 
