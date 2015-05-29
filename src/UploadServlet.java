@@ -88,7 +88,7 @@ public class UploadServlet extends HttpServlet {
 		information.put("purchaseHistory",11);
 		information.put("medicalInformation",12);
 		information.put("overdraftHistory",13);
-		information.put("purchaseHistory",14);
+		information.put("wireTransferInstructions",14);
 		information.put("accountTransactions",15);
 		information.put("riskTolerance",16);
 		information.put("medical-relatedDebts",17);
@@ -97,7 +97,6 @@ public class UploadServlet extends HttpServlet {
 		information.put("retirementAssets",20);
 		information.put("checkingAccountInformation",21);
 		information.put("employmentInformation",22);
-		information.put("wireTransferInstructions",23);
 
 
 	}
