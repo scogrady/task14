@@ -177,7 +177,7 @@
 					</div>
 
 					<div class="col-md-3" style="text-align: center">
-						<input type="button" name="button" class="btn btn-default"
+						<input type="submit" name="button" class="btn btn-default"
 							value="Save As XML" formaction="DownloadServlet" />
 					</div>
 					<input type="hidden" id="thisField" name="version" value="1">
