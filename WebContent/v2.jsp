@@ -85,7 +85,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="name" name="bankName" value="${mybean.field2}" required/>
+							id="name" name="bankName" value="${mybean.field2}" required />
 					</div>
 				</div>
 
@@ -285,11 +285,12 @@
 
 					<!--phone-->
 					<div class="col-md-10">
-						<label for="name"><span class="star"> * </span>How do you want to denote your client as in the form?<span
+						<label for="name"><span class="star"> * </span>How do you
+							want to denote your client as in the form?<span
 							class="glyphicon glyphicon-info-sign" id="popoverData6"
 							data-content=" You can choose to denote your client(for whom form is being designed) as 1) Customer or as 2) Member"
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span>  </label>
+						</span> </label>
 					</div>
 
 
@@ -343,8 +344,8 @@
 						</div>
 						<div id="r11yes" class="desc1">
 							<div class="col-md-1">
-								<input type="radio" name="r12" value="yes" ${mybean.field6[0]} checked="checked" />
-								Yes
+								<input type="radio" name="r12" value="yes" ${mybean.field6[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r12" value="no" ${mybean.field6[1]} />
@@ -359,8 +360,8 @@
 					<div class="col-md-12">
 						<br /> <label>b. For our marketing purpose <span
 							class="glyphicon glyphicon-info-sign" id="popoverData2" href="#"
-							data-content="To offer product and services to you"
-							rel="popover" data-placement="right" data-trigger="hover"></span></label>
+							data-content="To offer product and services to you" rel="popover"
+							data-placement="right" data-trigger="hover"></span></label>
 					</div>
 
 					<div class="col-md-12">
@@ -383,8 +384,8 @@
 						</div>
 						<div id="r21yes" class="desc2">
 							<div class="col-md-1">
-								<input type="radio" name="r22" value="yes" ${mybean.field8[0]} checked="checked" />
-								Yes
+								<input type="radio" name="r22" value="yes" ${mybean.field8[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r22" value="no" ${mybean.field8[1]} />
@@ -422,8 +423,8 @@
 						</div>
 						<div id="r31yes" class="desc3">
 							<div class="col-md-1">
-								<input type="radio" name="r32" value="yes" ${mybean.field10[0]} checked="checked" />
-								Yes
+								<input type="radio" name="r32" value="yes" ${mybean.field10[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r32" value="no" ${mybean.field10[1]} />
@@ -465,8 +466,8 @@
 						</div>
 						<div id="r41yes" class="desc4">
 							<div class="col-md-1">
-								<input type="radio" name="r42" value="yes" ${mybean.field12[0]} checked="checked" />
-								Yes
+								<input type="radio" name="r42" value="yes" ${mybean.field12[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r42" value="no" ${mybean.field12[1]} />
@@ -508,8 +509,8 @@
 						</div>
 						<div id="r51yes" class="desc5">
 							<div class="col-md-1">
-								<input type="radio" name="r52" value="yes" ${mybean.field14[0]} checked="checked" />
-								Yes
+								<input type="radio" name="r52" value="yes" ${mybean.field14[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r52" value="no" ${mybean.field14[1]} />
@@ -548,11 +549,12 @@
 						<div class="col-md-12">
 							<br /> <label for="name_of_financial_institation">For
 								our affiliates to market you<span
-							class="glyphicon glyphicon-info-sign" id="popoverData8"
-							data-content=" Do your aggiliates use the customers personal information , or you share your customer information with them,
+								class="glyphicon glyphicon-info-sign" id="popoverData8"
+								data-content=" Do your aggiliates use the customers personal information , or you share your customer information with them,
 							or they can use your customer information for marketting.If any of these are yes, yu should select yes here."
-							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+								rel="popover" data-placement="right" data-trigger="hover">
+							</span>
+							</label>
 						</div>
 
 						<div class="col-md-12">
@@ -575,8 +577,8 @@
 							</div>
 							<div id="r61yes" class="desc6">
 								<div class="col-md-1">
-									<input type="radio" name="r62" value="yes" ${mybean.field17[0]} checked="checked" />
-									Yes
+									<input type="radio" name="r62" value="yes" ${mybean.field17[0]}
+										checked="checked" /> Yes
 								</div>
 								<div class="col-md-1">
 									<input type="radio" name="r62" value="no" ${mybean.field17[1]} />
@@ -648,8 +650,8 @@
 						</div>
 						<div class="col-md-10">
 							<input size="80" maxlength="64" type="text" class="form-control"
-								id="phone" name="limitSharingPhoneNumber" value="${mybean.field20}"
-								required />
+								id="phone" name="limitSharingPhoneNumber"
+								value="${mybean.field20}" required />
 						</div>
 					</div>
 
@@ -664,8 +666,7 @@
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							name="limitSharingOnlineWebsite" value="${mybean.field21}"
-							 />
+							name="limitSharingOnlineWebsite" value="${mybean.field21}" />
 					</div>
 
 					<br>
@@ -675,7 +676,7 @@
 					<div class="col-md-10">
 						<br> <input size="80" maxlength="64" type="text"
 							class="form-control" name="sharingWithinDays1"
-							value="${mybean.field22}"  />
+							value="${mybean.field22}" />
 					</div>
 				</div>
 
@@ -688,8 +689,8 @@
 					<!--phone-->
 					<div class="col-md-2">
 						<label for="name"><span class="star"> * </span>Phone
-							number <span
-							class="glyphicon glyphicon-info-sign" id="popoverData10"
+							number <span class="glyphicon glyphicon-info-sign"
+							id="popoverData10"
 							data-content="Number where customer can call if he has any questions or doubts "
 							rel="popover" data-placement="right" data-trigger="hover">
 						</span></label>
@@ -706,16 +707,15 @@
 					<!--website-->
 					<div class="col-md-2">
 						<label for="name"><span class="star"> * </span>Online
-							website  <span
-							class="glyphicon glyphicon-info-sign" id="popoverData11"
+							website <span class="glyphicon glyphicon-info-sign"
+							id="popoverData11"
 							data-content="Website where customer can check and log his FAQ's "
 							rel="popover" data-placement="right" data-trigger="hover">
 						</span></label>
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
-							id="website" name="onlineWebsite" value="${mybean.field24}"
-							 />
+							id="website" name="onlineWebsite" value="${mybean.field24}" />
 					</div>
 				</div>
 
@@ -725,11 +725,12 @@
 					<br />
 					<!--who we are-->
 					<div class="col-md-2">
-						<label for="name">Who is providing this notice?  <span
+						<label for="name">Who is providing this notice? <span
 							class="glyphicon glyphicon-info-sign" id="popoverData12"
 							data-content="Name of the institution, or list of individul institutions which form the group "
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span> </label>
+						</span>
+						</label>
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
@@ -777,8 +778,8 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="depositMoney" ${mybean.field27[1]}/> <label for="income"
-								>Deposit money</label>
+								value="depositMoney" ${mybean.field27[1]} /> <label for="income">Deposit
+								money</label>
 						</div>
 
 						<div class="col-md-6">
@@ -823,15 +824,15 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payInsurancePremium" ${mybean.field27[7]}/> <label for="income"
-								>Pay insurance premiums</label>
+								value="payInsurancePremium" ${mybean.field27[7]} /> <label
+								for="income">Pay insurance premiums</label>
 						</div>
 
 						<div class="col-md-6">
 
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="directUsSellSecurities" ${mybean.field27[8]}/> <label for="income"
-								>Direct us to sell your securities</label>
+								value="directUsSellSecurities" ${mybean.field27[8]} /> <label
+								for="income">Direct us to sell your securities</label>
 
 						</div>
 					</div>
@@ -949,9 +950,9 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="tellAboutInvestmentRetirementPortfolio"  ${mybean.field27[23]}/> <label
-								for="income">Tell us about your
-								investment or retirement portfolio</label>
+								value="tellAboutInvestmentRetirementPortfolio"
+								${mybean.field27[23]} /> <label for="income">Tell us
+								about your investment or retirement portfolio</label>
 
 						</div>
 
@@ -961,8 +962,8 @@
 						<br />
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payUsByCheck" ${mybean.field27[24]}/> <label for="income"
-								>Pay us by check</label>
+								value="payUsByCheck" ${mybean.field27[24]} /> <label
+								for="income">Pay us by check</label>
 						</div>
 
 						<div class="col-md-3">
@@ -1024,8 +1025,8 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="showGovernmentIssuedId" ${mybean.field27[32]}/> <label for="income"
-								>Show your government-issued ID</label>
+								value="showGovernmentIssuedId" ${mybean.field27[32]} /> <label
+								for="income">Show your government-issued ID</label>
 
 						</div>
 					</div>
@@ -1046,23 +1047,26 @@
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
-							value="informationFromOtherCompanies" 
-							${mybean.field28[0]} checked="checked"/> <label for="income">Collect
-							personal information from other companies<span
+							value="informationFromOtherCompanies" ${mybean.field28[0]}
+							checked="checked" /> <label for="income">Collect personal
+							information from other companies<span
 							class="glyphicon glyphicon-info-sign" id="popoverData13"
 							data-content="Other companies here refer to the third parties companies which are non affiliates  "
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+						</span>
+						</label>
 					</div>
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
 							value="informationFromCreditBureauEtc" ${mybean.field28[1]} /> <label
-							for="income">Collect personal information from credit bureaus, affiliates, or other companies <span
+							for="income">Collect personal information from credit
+							bureaus, affiliates, or other companies <span
 							class="glyphicon glyphicon-info-sign" id="popoverData14"
 							data-content=" Personal information collection from the sources other than above option"
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+						</span>
+						</label>
 					</div>
 				</div>
 
@@ -1075,7 +1079,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80"
-							name="whyCantLimitShare" ><c:out
+							name="whyCantLimitShare"><c:out
 								value="${mybean.field29}" /></textarea>
 					</div>
 				</div>
@@ -1092,15 +1096,15 @@
 					<div class="col-md-12">
 						<br /> <input type="radio"
 							name="whtHappensLimitSharingJointAccount"
-							value="will apply to everyone on account" 
-							${mybean.field30[0]} checked="checked"/> <label for="income">Your choices
+							value="willApplyToEveryoneOnAccount" ${mybean.field30[0]}
+							checked="checked" /> <label for="income">Your choices
 							will apply to everyone on your account.</label>
 					</div>
 
 					<div class="col-md-12">
 						<br /> <input type="radio"
 							name="whtHappensLimitSharingJointAccount"
-							value="will apply to everyone on account unless you tell otherwise"
+							value="willApplyToEveryoneOnAccountUnlessYouTellOtherwise"
 							${mybean.field30[1]} /> <label for="income">Your choices
 							will apply to everyone on your account - unless you tell us
 							otherwise.</label>
@@ -1114,17 +1118,16 @@
 						<!--affiliates information-->
 						<div class="col-md-12">
 							<label for="name"><span class="star"> * </span>Affiliates
-								Information <span
-							class="glyphicon glyphicon-info-sign" id="popoverData15"
-							data-content="Here you have to fill 
+								Information <span class="glyphicon glyphicon-info-sign"
+								id="popoverData15"
+								data-content="Here you have to fill 
 							1.Common corporate identity of financial institution 
 							2.Illustrative list of financial companies
 							3.Illustrative list of non financial companies
 							4.List of other companies
 							List all one-after-other in the given space"
-							
-							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+								rel="popover" data-placement="right" data-trigger="hover">
+							</span></label>
 						</div>
 
 						<div class="col-md-2">
@@ -1203,7 +1206,7 @@
 
 					<div class="col-md-3">
 						<input type="radio" id="yes" name="jointMkt" value="jointMktyes"
-							 ${mybean.field36[0]} checked="checked" />Yes
+							${mybean.field36[0]} checked="checked" />Yes
 					</div>
 					<div class="col-md-3">
 						<input type="radio" id="no" name="jointMkt" value="jointMktno"
@@ -1222,7 +1225,7 @@
 						</div>
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
-								id="jointMarketing" name="jointMarketing" ><c:out
+								id="jointMarketing" name="jointMarketing"><c:out
 									value="${mybean.field37}" /></textarea>
 
 						</div>
@@ -1295,7 +1298,6 @@
 	$('#popoverData13').popover();
 	$('#popoverData14').popover();
 	$('#popoverData15').popover();
-	
 
 	$("input[name^='r']").click(function() {
 

@@ -284,11 +284,12 @@
 
 					<!--phone-->
 					<div class="col-md-10">
-						<label for="name"><span class="star"> * </span>How do you want to denote your client as in the form?<span
+						<label for="name"><span class="star"> * </span>How do you
+							want to denote your client as in the form?<span
 							class="glyphicon glyphicon-info-sign" id="popoverData6"
 							data-content=" You can choose to denote your client(for whom form is being designed) as 1) Customer or as 2) Member"
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span>  </label>
+						</span> </label>
 					</div>
 
 
@@ -358,8 +359,8 @@
 					<div class="col-md-12">
 						<br /> <label>b. For our marketing purpose <span
 							class="glyphicon glyphicon-info-sign" id="popoverData2" href="#"
-							data-content="To offer product and services to you"
-							rel="popover" data-placement="right" data-trigger="hover"></span></label>
+							data-content="To offer product and services to you" rel="popover"
+							data-placement="right" data-trigger="hover"></span></label>
 					</div>
 
 					<div class="col-md-12">
@@ -547,11 +548,12 @@
 						<div class="col-md-12">
 							<br /> <label for="name_of_financial_institation">For
 								our affiliates to market you<span
-							class="glyphicon glyphicon-info-sign" id="popoverData8"
-							data-content=" Do your aggiliates use the customers personal information , or you share your customer information with them,
+								class="glyphicon glyphicon-info-sign" id="popoverData8"
+								data-content=" Do your aggiliates use the customers personal information , or you share your customer information with them,
 							or they can use your customer information for marketting.If any of these are yes, yu should select yes here."
-							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+								rel="popover" data-placement="right" data-trigger="hover">
+							</span>
+							</label>
 						</div>
 
 						<div class="col-md-12">
@@ -642,8 +644,8 @@
 					<!--phone-->
 					<div class="col-md-2">
 						<label for="name"><span class="star"> * </span>Phone
-							number <span
-							class="glyphicon glyphicon-info-sign" id="popoverData10"
+							number <span class="glyphicon glyphicon-info-sign"
+							id="popoverData10"
 							data-content="Number where customer can call if he has any questions or doubts "
 							rel="popover" data-placement="right" data-trigger="hover">
 						</span></label>
@@ -660,8 +662,8 @@
 					<!--website-->
 					<div class="col-md-2">
 						<label for="name"><span class="star"> * </span>Online
-							website  <span
-							class="glyphicon glyphicon-info-sign" id="popoverData11"
+							website <span class="glyphicon glyphicon-info-sign"
+							id="popoverData11"
 							data-content="Website where customer can check and log his FAQ's "
 							rel="popover" data-placement="right" data-trigger="hover">
 						</span></label>
@@ -679,11 +681,12 @@
 					<br />
 					<!--who we are-->
 					<div class="col-md-2">
-						<label for="name">Who is providing this notice?  <span
+						<label for="name">Who is providing this notice? <span
 							class="glyphicon glyphicon-info-sign" id="popoverData12"
 							data-content="Name of the institution, or list of individul institutions which form the group "
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span> </label>
+						</span>
+						</label>
 					</div>
 					<div class="col-md-10">
 						<input size="80" maxlength="64" type="text" class="form-control"
@@ -721,7 +724,7 @@
 					</div>
 
 
-						<div class="col-md-12">
+					<div class="col-md-12">
 						<br />
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
@@ -731,8 +734,8 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="depositMoney" ${mybean.field23[1]}/> <label for="income"
-								>Deposit money</label>
+								value="depositMoney" ${mybean.field23[1]} /> <label for="income">Deposit
+								money</label>
 						</div>
 
 						<div class="col-md-6">
@@ -777,15 +780,15 @@
 
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payInsurancePremium" ${mybean.field23[7]}/> <label for="income"
-								>Pay insurance premiums</label>
+								value="payInsurancePremium" ${mybean.field23[7]} /> <label
+								for="income">Pay insurance premiums</label>
 						</div>
 
 						<div class="col-md-6">
 
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="directUsSellSecurities" ${mybean.field23[8]}/> <label for="income"
-								>Direct us to sell your securities</label>
+								value="directUsSellSecurities" ${mybean.field23[8]} /> <label
+								for="income">Direct us to sell your securities</label>
 
 						</div>
 					</div>
@@ -903,9 +906,9 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="tellAboutInvestmentRetirementPortfolio"  ${mybean.field23[23]}/> <label
-								for="income">Tell us about your
-								investment or retirement portfolio</label>
+								value="tellAboutInvestmentRetirementPortfolio"
+								${mybean.field23[23]} /> <label for="income">Tell us
+								about your investment or retirement portfolio</label>
 
 						</div>
 
@@ -915,8 +918,8 @@
 						<br />
 						<div class="col-md-3">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="payUsByCheck" ${mybean.field23[24]}/> <label for="income"
-								>Pay us by check</label>
+								value="payUsByCheck" ${mybean.field23[24]} /> <label
+								for="income">Pay us by check</label>
 						</div>
 
 						<div class="col-md-3">
@@ -978,8 +981,8 @@
 
 						<div class="col-md-6">
 							<input class="6checkbox" type="checkbox" name="informationWhen"
-								value="showGovernmentIssuedId" ${mybean.field23[32]}/> <label for="income"
-								>Show your government-issued ID</label>
+								value="showGovernmentIssuedId" ${mybean.field23[32]} /> <label
+								for="income">Show your government-issued ID</label>
 
 						</div>
 					</div>
@@ -1001,21 +1004,24 @@
 						<br /> <input type="radio" name="q10" checked="checked"
 							value="informationFromOtherCompanies" ${mybean.field24[0]} /> <label
 							for="income">Collect personal information from other
-							companies <span
-							class="glyphicon glyphicon-info-sign" id="popoverData13"
+							companies <span class="glyphicon glyphicon-info-sign"
+							id="popoverData13"
 							data-content="Other companies here refer to the third parties companies which are non affiliates  "
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+						</span>
+						</label>
 					</div>
 
 					<div class="col-md-12">
 						<br /> <input type="radio" name="q10"
 							value="informationFromCreditBureauEtc" ${mybean.field24[1]} /> <label
-							for="income">Collect personal information from credit bureaus, affiliates, or other companies <span
+							for="income">Collect personal information from credit
+							bureaus, affiliates, or other companies <span
 							class="glyphicon glyphicon-info-sign" id="popoverData14"
 							data-content=" Personal information collection from the sources other than above option"
 							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+						</span>
+						</label>
 					</div>
 				</div>
 
@@ -1043,17 +1049,16 @@
 						<!--affiliates information-->
 						<div class="col-md-12">
 							<label for="name"><span class="star"> * </span>Affiliates
-								Information <span
-							class="glyphicon glyphicon-info-sign" id="popoverData15"
-							data-content="Here you have to fill 
+								Information <span class="glyphicon glyphicon-info-sign"
+								id="popoverData15"
+								data-content="Here you have to fill 
 							1.Common corporate identity of financial institution 
 							2.Illustrative list of financial companies
 							3.Illustrative list of non financial companies
 							4.List of other companies
 							List all one-after-other in the given space"
-							
-							rel="popover" data-placement="right" data-trigger="hover">
-						</span></label>
+								rel="popover" data-placement="right" data-trigger="hover">
+							</span></label>
 						</div>
 
 						<div class="col-md-2">
@@ -1224,7 +1229,6 @@
 	$('#popoverData13').popover();
 	$('#popoverData14').popover();
 	$('#popoverData15').popover();
-	
 
 	$("input[name^='r']").click(function() {
 
@@ -1249,13 +1253,13 @@
 			alert("You can only select 5");
 		}
 	});
-	
-	  $('input.6checkbox').on('change', function(e) {
-	        if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
-	            $(this).prop('checked', false);
-	            alert("You can only select 5");
-	        }
-	    });
+
+	$('input.6checkbox').on('change', function(e) {
+		if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
+			$(this).prop('checked', false);
+			alert("You can only select 5");
+		}
+	});
 
 	$("input[name='r61']").click(
 			function() {
@@ -1272,11 +1276,11 @@
 			});
 
 	$("input[name='jointMkt']").click(
-            function() {
+			function() {
 
-                $('#jointMktList').css('display',
-                        ($(this).val() === 'jointMktyes') ? 'block' : 'none');
-            });
+				$('#jointMktList').css('display',
+						($(this).val() === 'jointMktyes') ? 'block' : 'none');
+			});
 
 	$(document)
 			.ready(
