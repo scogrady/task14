@@ -335,7 +335,7 @@
 						</div>
 						<div id="r11yes" class="desc1">
 							<div class="col-md-1">
-								<input type="radio" name="r12" value="yes" ${mybean.field6[0]} />
+								<input type="radio" name="r12" value="yes" ${mybean.field6[0]} checked="checked" />
 								Yes
 							</div>
 							<div class="col-md-1">
@@ -375,7 +375,7 @@
 						</div>
 						<div id="r21yes" class="desc2">
 							<div class="col-md-1">
-								<input type="radio" name="r22" value="yes" ${mybean.field8[0]} />
+								<input type="radio" name="r22" value="yes" ${mybean.field8[0]} checked="checked" />
 								Yes
 							</div>
 							<div class="col-md-1">
@@ -414,7 +414,7 @@
 						</div>
 						<div id="r31yes" class="desc3">
 							<div class="col-md-1">
-								<input type="radio" name="r32" value="yes" ${mybean.field10[0]} />
+								<input type="radio" name="r32" value="yes" ${mybean.field10[0]} checked="checked" />
 								Yes
 							</div>
 							<div class="col-md-1">
@@ -457,7 +457,7 @@
 						</div>
 						<div id="r41yes" class="desc4">
 							<div class="col-md-1">
-								<input type="radio" name="r42" value="yes" ${mybean.field12[0]} />
+								<input type="radio" name="r42" value="yes" ${mybean.field12[0]} checked="checked" />
 								Yes
 							</div>
 							<div class="col-md-1">
@@ -500,7 +500,7 @@
 						</div>
 						<div id="r51yes" class="desc5">
 							<div class="col-md-1">
-								<input type="radio" name="r52" value="yes" ${mybean.field14[0]} />
+								<input type="radio" name="r52" value="yes" ${mybean.field14[0]} checked="checked" />
 								Yes
 							</div>
 							<div class="col-md-1">
@@ -557,7 +557,7 @@
 							</div>
 							<div id="r61yes" class="desc6">
 								<div class="col-md-1">
-									<input type="radio" name="r62" value="yes" ${mybean.field17[0]} />
+									<input type="radio" name="r62" value="yes" ${mybean.field17[0]} checked="checked" />
 									Yes
 								</div>
 								<div class="col-md-1">
@@ -600,8 +600,8 @@
 						</div>
 						<div id="r71yes" class="desc7">
 							<div class="col-md-1">
-								<input type="radio" name="r72" value="yes" ${mybean.field19[0]} />
-								Yes
+								<input type="radio" name="r72" value="yes" ${mybean.field19[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r72" value="no" ${mybean.field19[1]} />

@@ -335,8 +335,8 @@
 						</div>
 						<div id="r11yes" class="desc1">
 							<div class="col-md-1">
-								<input type="radio" name="r12" value="yes" ${mybean.field6[0]} />
-								Yes
+								<input type="radio" name="r12" value="yes" ${mybean.field6[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r12" value="no" ${mybean.field6[1]} />
@@ -378,8 +378,8 @@
 						</div>
 						<div id="r21yes" class="desc2">
 							<div class="col-md-1">
-								<input type="radio" name="r22" value="yes" ${mybean.field8[0]} />
-								Yes
+								<input type="radio" name="r22" value="yes" ${mybean.field8[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r22" value="no" ${mybean.field8[1]} />
@@ -417,8 +417,8 @@
 						</div>
 						<div id="r31yes" class="desc3">
 							<div class="col-md-1">
-								<input type="radio" name="r32" value="yes" ${mybean.field10[0]} />
-								Yes
+								<input type="radio" name="r32" value="yes" ${mybean.field10[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r32" value="no" ${mybean.field10[1]} />
@@ -460,8 +460,8 @@
 						</div>
 						<div id="r41yes" class="desc4">
 							<div class="col-md-1">
-								<input type="radio" name="r42" value="yes" ${mybean.field12[0]} />
-								Yes
+								<input type="radio" name="r42" value="yes" ${mybean.field12[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r42" value="no" ${mybean.field12[1]} />
@@ -503,8 +503,8 @@
 						</div>
 						<div id="r51yes" class="desc5">
 							<div class="col-md-1">
-								<input type="radio" name="r52" value="yes" ${mybean.field14[0]} />
-								Yes
+								<input type="radio" name="r52" value="yes" ${mybean.field14[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r52" value="no" ${mybean.field14[1]} />
@@ -560,8 +560,8 @@
 							</div>
 							<div id="r61yes" class="desc6">
 								<div class="col-md-1">
-									<input type="radio" name="r62" value="yes" ${mybean.field17[0]} />
-									Yes
+									<input type="radio" name="r62" value="yes" ${mybean.field17[0]}
+										checked="checked" /> Yes
 								</div>
 								<div class="col-md-1">
 									<input type="radio" name="r62" value="no" ${mybean.field17[1]} />
@@ -603,8 +603,8 @@
 						</div>
 						<div id="r71yes" class="desc7">
 							<div class="col-md-1">
-								<input type="radio" name="r72" value="yes" ${mybean.field19[0]} />
-								Yes
+								<input type="radio" name="r72" value="yes" ${mybean.field19[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r72" value="no" ${mybean.field19[1]} />
@@ -1355,13 +1355,13 @@
 			alert("You can only select 5");
 		}
 	});
-	
-	  $('input.6checkbox').on('change', function(e) {
-	        if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
-	            $(this).prop('checked', false);
-	            alert("You can only select 5");
-	        }
-	    });
+
+	$('input.6checkbox').on('change', function(e) {
+		if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
+			$(this).prop('checked', false);
+			alert("You can only select 5");
+		}
+	});
 
 	$("input[name='r61']").click(
 			function() {
@@ -1502,7 +1502,7 @@
 							jointMarketing : form.jointMarketing.value,
 							otherInfo : form.otherInfo.value
 						}));
-        window.open("privacyForm.html");
+		window.open("privacyForm.html");
 		return true;
 	}
 

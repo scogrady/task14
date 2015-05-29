@@ -59,7 +59,7 @@
 
 
 		<div class="row">
-			<form class="form-inline" method="POST" onsubmit="storeValues(this)">
+			<form class="form-inline" method="POST" onsubmit="storeValues(this)" id="myform">
 				<div class="form-group col-md-12">
 					<br /> <br />
 
@@ -374,8 +374,8 @@
 						</div>
 						<div id="r21yes" class="desc2">
 							<div class="col-md-1">
-								<input type="radio" name="r22" value="yes" ${mybean.field8[0]} />
-								Yes
+								<input type="radio" name="r22" value="yes" ${mybean.field8[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r22" value="no" ${mybean.field8[1]} />
@@ -413,8 +413,8 @@
 						</div>
 						<div id="r31yes" class="desc3">
 							<div class="col-md-1">
-								<input type="radio" name="r32" value="yes" ${mybean.field10[0]} />
-								Yes
+								<input type="radio" name="r32" value="yes" ${mybean.field10[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r32" value="no" ${mybean.field10[1]} />
@@ -456,8 +456,8 @@
 						</div>
 						<div id="r41yes" class="desc4">
 							<div class="col-md-1">
-								<input type="radio" name="r42" value="yes" ${mybean.field12[0]} />
-								Yes
+								<input type="radio" name="r42" value="yes" ${mybean.field12[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r42" value="no" ${mybean.field12[1]} />
@@ -499,8 +499,8 @@
 						</div>
 						<div id="r51yes" class="desc5">
 							<div class="col-md-1">
-								<input type="radio" name="r52" value="yes" ${mybean.field14[0]} />
-								Yes
+								<input type="radio" name="r52" value="yes" ${mybean.field14[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r52" value="no" ${mybean.field14[1]} />
@@ -556,8 +556,8 @@
 							</div>
 							<div id="r61yes" class="desc6">
 								<div class="col-md-1">
-									<input type="radio" name="r62" value="yes" ${mybean.field17[0]} />
-									Yes
+									<input type="radio" name="r62" value="yes" ${mybean.field17[0]}
+										checked="checked" /> Yes
 								</div>
 								<div class="col-md-1">
 									<input type="radio" name="r62" value="no" ${mybean.field17[1]} />
@@ -599,8 +599,8 @@
 						</div>
 						<div id="r71yes" class="desc7">
 							<div class="col-md-1">
-								<input type="radio" name="r72" value="yes" ${mybean.field19[0]} />
-								Yes
+								<input type="radio" name="r72" value="yes" ${mybean.field19[0]}
+									checked="checked" /> Yes
 							</div>
 							<div class="col-md-1">
 								<input type="radio" name="r72" value="no" ${mybean.field19[1]} />
@@ -611,12 +611,7 @@
 							<div class="col-md-2">We don't share</div>
 						</div>
 					</div>
-
 				</div>
-
-
-
-
 
 				<div class="form-group col-md-12">
 					<br />
@@ -1186,13 +1181,13 @@
 			alert("You can only select 5");
 		}
 	});
-	
-	  $('input.6checkbox').on('change', function(e) {
-	        if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
-	            $(this).prop('checked', false);
-	            alert("You can only select 5");
-	        }
-	    });
+
+	$('input.6checkbox').on('change', function(e) {
+		if ($('input.6checkbox[type=checkbox]:checked').length > 5) {
+			$(this).prop('checked', false);
+			alert("You can only select 5");
+		}
+	});
 
 	$("input[name='r61']").click(
 			function() {
@@ -1209,11 +1204,11 @@
 			});
 
 	$("input[name='jointMkt']").click(
-            function() {
+			function() {
 
-                $('#jointMktList').css('display',
-                        ($(this).val() === 'jointMktyes') ? 'block' : 'none');
-            });
+				$('#jointMktList').css('display',
+						($(this).val() === 'jointMktyes') ? 'block' : 'none');
+			});
 
 	$(document)
 			.ready(
@@ -1264,6 +1259,18 @@
 								}
 							}
 						}
+					
+						$('#myform').validate({
+					        rules: {
+					            information : {
+					               required: true,
+					               minlength: 5,  // at least two checkboxes are required
+					                maxlength: 5 // less than 5 checkboxes are required
+					               // rangelength: [2,4] // must select 2, 3, or 4 checkboxes
+					            }
+					        }
+					    });
+					
 					});
 
 	function storeValues(form) {
