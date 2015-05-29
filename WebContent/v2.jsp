@@ -984,13 +984,13 @@
 
                     <div class="col-md-12">
                         <br /> <input type="radio" name="q10"
-                            value="information from other companies" checked="checked" ${mybean.field28[0]}/> <label for="income">Collect
+                            value="informationFromOtherCompanies" checked="checked" ${mybean.field28[0]}/> <label for="income">Collect
                             personal information from other companies</label>
                     </div>
 
                     <div class="col-md-12">
                         <br /> <input type="radio" name="q10"
-                            value="information from credit bureau etc" ${mybean.field28[1]}/> <label
+                            value="informationFromCreditBureauEtc" ${mybean.field28[1]}/> <label
                             for="income">Collect personal information from others,
                             e.g. credit bureaus, affiliates, or other companies</label>
                     </div>
@@ -1051,7 +1051,7 @@
 
                         <div class="col-md-10">
                             <input size="78" maxlength="62" type="text" class="form-control"
-                                id="affiliatesName" name="affiliates1" value="${mybean.field26}" />
+                                id="affiliatesName" name="affiliatesName" value="${mybean.field26}" />
                         </div>
                     </div>
                     <div class="form-group col-md-12">

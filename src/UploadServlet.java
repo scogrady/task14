@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,6 +32,75 @@ maxFileSize = 1024 * 1024 * 10, // 10MB
 maxRequestSize = 1024 * 1024 * 50)
 // 50MB
 public class UploadServlet extends HttpServlet {
+
+	private static HashMap<String, Integer> informationWhen = null;
+	private static HashMap<String, Integer> information = null;
+
+	public void init() {
+		informationWhen = new HashMap<String, Integer>();
+		informationWhen.put("openAccount", 0);
+		informationWhen.put("depositMoney", 1);
+		informationWhen.put("tellWhereSendMoney", 2);
+		informationWhen.put("useCard", 3);
+		informationWhen.put("payBill", 4);
+		informationWhen.put("seekFinancialTaxAdvice", 5);
+		informationWhen.put("applyForInsurance", 6);
+		informationWhen.put("payInsurancePremium", 7);
+		informationWhen.put("directUsSellSecurities", 8);
+		informationWhen.put("sellSecurities", 9);
+		informationWhen.put("buySecurities", 10);
+		informationWhen.put("seekAdviceInvestments", 11);
+		informationWhen.put("directUsBuySecurities", 12);
+		informationWhen.put("fileAnInsuranceClaim", 13);
+		informationWhen.put("makeDepositsWithdrawalsFromAccount", 14);
+		informationWhen.put("provideEmploymentInformation", 15);
+		informationWhen.put("giveUsIncomeInformation", 16);
+		informationWhen.put("enterIntoInvestmentAdvisoryContract", 17);
+		informationWhen.put("giveEmploymentHistory", 18);
+		informationWhen.put("provideAccountInformation", 19);
+		informationWhen.put("tellAboutInvestmentRetirementEarnings", 20);
+		informationWhen.put("applyFinancing", 21);
+		informationWhen.put("applyLease", 22);
+		informationWhen.put("tellAboutInvestmentRetirementPortfolio", 23);
+		informationWhen.put("payUsByCheck", 24);
+		informationWhen.put("giveWageStatement", 25);
+		informationWhen.put("giveContactInformation", 26);
+		informationWhen.put("makeWireTransfer", 27);
+		informationWhen.put("tellWhoReceivesMoney", 28);
+		informationWhen.put("provideMortgageInformation", 29);
+		informationWhen.put("showDriverLicense", 20);
+		informationWhen.put("applyLoan", 31);
+		informationWhen.put("showGovernmentIssuedId", 32);
+		informationWhen.put("orderCommodityFuturesOptionTrade", 33);
+		
+		information = new HashMap<String, Integer>();
+		information.put("income",0);
+		information.put("accountBalances",1);
+		information.put("paymentHistory",2);
+		information.put("transactionHistory",3);
+		information.put("transactionOrLossHistory",4);
+		information.put("creditHistory",5);
+		information.put("creditScores",6);
+		information.put("assets",7);
+		information.put("investmentExperience",8);
+		information.put("credit-basedInsuranceScores",9);
+		information.put("insuranceClaimHistory",10);
+		information.put("purchaseHistory",11);
+		information.put("medicalInformation",12);
+		information.put("overdraftHistory",13);
+		information.put("purchaseHistory",14);
+		information.put("accountTransactions",15);
+		information.put("riskTolerance",16);
+		information.put("medical-relatedDebts",17);
+		information.put("creditHCardOrOtherDebts",18);
+		information.put("mortgageRatesAndPayments",19);
+		information.put("retirementAssets",20);
+		information.put("checkingAccountInformation",21);
+		information.put("employmentInformation",22);
+		information.put("wireTransferInstructions",23);
+
+
+	}
 
 	/**
 	 *  
@@ -155,16 +225,16 @@ public class UploadServlet extends HttpServlet {
 		MyBeanV4 bean = new MyBeanV4();
 		bean.setField1(getFieldof2Lengths("applyChoices", 2, "yes", "no",
 				eElement, SingleOptionNode));
-		bean.setField2(eElement.getElementsByTagName("address1")
-				.item(0).getTextContent());
-		bean.setField3(eElement.getElementsByTagName("address2")
-				.item(0).getTextContent());
-		bean.setField4(eElement.getElementsByTagName("city")
-				.item(0).getTextContent());
-		bean.setField5(eElement.getElementsByTagName("state")
-				.item(0).getTextContent());
-		bean.setField6(eElement.getElementsByTagName("zip")
-				.item(0).getTextContent());
+		bean.setField2(eElement.getElementsByTagName("address1").item(0)
+				.getTextContent());
+		bean.setField3(eElement.getElementsByTagName("address2").item(0)
+				.getTextContent());
+		bean.setField4(eElement.getElementsByTagName("city").item(0)
+				.getTextContent());
+		bean.setField5(eElement.getElementsByTagName("state").item(0)
+				.getTextContent());
+		bean.setField6(eElement.getElementsByTagName("zip").item(0)
+				.getTextContent());
 		bean.setField7(getFieldof2Lengths("accountNumber", 2, "yes", "no",
 				eElement, SingleOptionNode));
 		return bean;
@@ -178,17 +248,8 @@ public class UploadServlet extends HttpServlet {
 		bean.setField2(eElement.getElementsByTagName("bankName").item(0)
 				.getTextContent());
 
-		bean.setField3(getFieldof24Lengths("information", 24, "income",
-				"accountBalances", "paymentHistory", "transactionHistory",
-				"transactionOrLossHistory", "creditHistory", "creditScores",
-				"assets", "investmentExperience",
-				"credit-basedInsuranceScores", "insuranceClaimHistory",
-				"purchaseHistory", "medicalInformation", "overdraftHistory",
-				"purchaseHistory", "accountTransactions", "riskTolerance",
-				"medical-relatedDebts", "creditHCardOrOtherDebts",
-				"mortgageRatesAndPayments", "retirementAssets",
-				"checkingAccountInformation", "employmentInformation",
-				"wireTransferInstructions", eElement, SingleOptionNode));
+		bean.setField3(getCheckboxValues("information", information, eElement,
+				SingleOptionNode));
 		bean.setField4(getFieldof2Lengths("whose", 2, "customer", "member",
 				eElement, SingleOptionNode));
 		bean.setField5(getFieldof2Lengths("r11", 2, "11yes", "11no", eElement,
@@ -233,46 +294,64 @@ public class UploadServlet extends HttpServlet {
 				.getTextContent());
 		bean.setField24(eElement.getElementsByTagName("onlineWebsite").item(0)
 				.getTextContent());
-		bean.setField34(getFieldof2Lengths("applyChoices", 2, "yes", "no",
+		bean.setField25(getFieldof2Lengths("applyChoices", 2, "yes", "no",
 				eElement, SingleOptionNode));
-		bean.setField35(eElement.getElementsByTagName("address1")
-				.item(0).getTextContent());
-		bean.setField36(eElement.getElementsByTagName("address2")
-				.item(0).getTextContent());
-		bean.setField37(eElement.getElementsByTagName("city")
-				.item(0).getTextContent());
-		bean.setField38(eElement.getElementsByTagName("state")
-				.item(0).getTextContent());
-		bean.setField39(eElement.getElementsByTagName("zip")
-				.item(0).getTextContent());
-		bean.setField40(getFieldof2Lengths("accountNumber", 2, "yes", "no",
+		bean.setField26(eElement.getElementsByTagName("address1").item(0)
+				.getTextContent());
+		bean.setField27(eElement.getElementsByTagName("address2").item(0)
+				.getTextContent());
+		bean.setField28(eElement.getElementsByTagName("city").item(0)
+				.getTextContent());
+		bean.setField29(eElement.getElementsByTagName("state").item(0)
+				.getTextContent());
+		bean.setField30(eElement.getElementsByTagName("zip").item(0)
+				.getTextContent());
+		bean.setField31(getFieldof2Lengths("accountNumber", 2, "yes", "no",
 				eElement, SingleOptionNode));
 
-		bean.setField25(eElement.getElementsByTagName("whoProvidingNotice")
+		bean.setField32(eElement.getElementsByTagName("whoProvidingNotice")
 				.item(0).getTextContent());
-		bean.setField26(eElement
+		bean.setField33(eElement
 				.getElementsByTagName("howWeProtectPersonalInfo").item(0)
 				.getTextContent());
-		bean.setField27(getFieldof5Lengths("informationWhen", 5, "openAccount",
-				"depositMoney", "applyLoan", "useCard", "payBill", eElement,
+		bean.setField34(getCheckboxValues("informationWhen", informationWhen, eElement,
 				SingleOptionNode));
-		bean.setField28(getFieldof2Lengths("q10", 2,
-				"information from other companies",
-				"information from credit bureau etc", eElement,
+		bean.setField35(getFieldof2Lengths("q10", 2,
+				"informationFromOtherCompanies",
+				"informationFromCreditBureauEtc", eElement,
 				SingleOptionNode));
-		bean.setField29(eElement.getElementsByTagName("whyCantLimitShare")
+		bean.setField36(eElement.getElementsByTagName("whyCantLimitShare")
 				.item(0).getTextContent());
-		bean.setField30(getFieldof2Lengths("affiliates", 2,
-				"will apply to everyone on account",
-				"will apply to everyone on account unless you tell otherwise",
+		bean.setField37(getFieldof2Lengths("whtHappensLimitSharingJointAccount", 2,
+				"willApplyToEveryoneOnAccount",
+				"willApplyToEveryoneOnAccountUnlessYouTellOtherwise",
 				eElement, SingleOptionNode));
-		bean.setField31(eElement.getElementsByTagName("nonAffiliates").item(0)
+		bean.setField38(eElement.getElementsByTagName("nonAffiliates").item(0)
 				.getTextContent());
-		bean.setField32(eElement.getElementsByTagName("jointMarketing").item(0)
+		bean.setField39(eElement.getElementsByTagName("jointMarketing").item(0)
 				.getTextContent());
-		bean.setField33(eElement.getElementsByTagName("otherInfo").item(0)
+		bean.setField40(eElement.getElementsByTagName("otherInfo").item(0)
 				.getTextContent());
 		return bean;
+	}
+
+	private String[] getCheckboxValues(String tagName,
+			HashMap<String, Integer> map, Element eElement,
+			NodeList singleOptionNode) {
+		String[] field = null;
+		singleOptionNode = (NodeList) eElement.getElementsByTagName(tagName);
+		int nodeLen = singleOptionNode.getLength();
+		if (singleOptionNode != null && nodeLen > 0) {
+			field = new String[map.size()];
+			for (int i = 0; i < nodeLen; i++) {
+				Element el1 = (Element) singleOptionNode.item(i);
+
+				String checkbox = el1.getTextContent();
+				field[map.get(checkbox)] = "checked";
+			}
+		}
+		return field;
+
 	}
 
 	private MyBeanV2 processVersion2(Element eElement) {
@@ -282,18 +361,8 @@ public class UploadServlet extends HttpServlet {
 				.getTextContent());
 		bean.setField2(eElement.getElementsByTagName("bankName").item(0)
 				.getTextContent());
-
-		bean.setField3(getFieldof24Lengths("information", 24, "income",
-				"accountBalances", "paymentHistory", "transactionHistory",
-				"transactionOrLossHistory", "creditHistory", "creditScores",
-				"assets", "investmentExperience",
-				"credit-basedInsuranceScores", "insuranceClaimHistory",
-				"purchaseHistory", "medicalInformation", "overdraftHistory",
-				"purchaseHistory", "accountTransactions", "riskTolerance",
-				"medical-relatedDebts", "creditHCardOrOtherDebts",
-				"mortgageRatesAndPayments", "retirementAssets",
-				"checkingAccountInformation", "employmentInformation",
-				"wireTransferInstructions", eElement, SingleOptionNode));
+		bean.setField3(getCheckboxValues("information", information, eElement,
+				SingleOptionNode));
 		bean.setField4(getFieldof2Lengths("whose", 2, "customer", "member",
 				eElement, SingleOptionNode));
 		bean.setField5(getFieldof2Lengths("r11", 2, "11yes", "11no", eElement,
@@ -343,8 +412,7 @@ public class UploadServlet extends HttpServlet {
 		bean.setField26(eElement
 				.getElementsByTagName("howWeProtectPersonalInfo").item(0)
 				.getTextContent());
-		bean.setField27(getFieldof5Lengths("informationWhen", 5, "openAccount",
-				"depositMoney", "applyLoan", "useCard", "payBill", eElement,
+		bean.setField27(getCheckboxValues("informationWhen", informationWhen, eElement,
 				SingleOptionNode));
 		bean.setField28(getFieldof2Lengths("q10", 2,
 				"information from other companies",
@@ -352,7 +420,8 @@ public class UploadServlet extends HttpServlet {
 				SingleOptionNode));
 		bean.setField29(eElement.getElementsByTagName("whyCantLimitShare")
 				.item(0).getTextContent());
-		bean.setField30(getFieldof2Lengths("whtHappensLimitSharingJointAccount", 2,
+		bean.setField30(getFieldof2Lengths(
+				"whtHappensLimitSharingJointAccount", 2,
 				"will apply to everyone on account",
 				"will apply to everyone on account unless you tell otherwise",
 				eElement, SingleOptionNode));
@@ -367,78 +436,6 @@ public class UploadServlet extends HttpServlet {
 		return bean;
 	}
 
-	private String[] getFieldof24Lengths(String tagName, int arrLength,
-			String case1, String case2, String case3, String case4,
-			String case5, String case6, String case7, String case8,
-			String case9, String case10, String case11, String case12,
-			String case13, String case14, String case15, String case16,
-			String case17, String case18, String case19, String case20,
-			String case21, String case22, String case23, String case24,
-			Element eElement, NodeList singleOptionNode) {
-
-		String[] field = null;
-		singleOptionNode = (NodeList) eElement.getElementsByTagName(tagName);
-		int nodeLen = singleOptionNode.getLength();
-		if (singleOptionNode != null && nodeLen > 0) {
-			field = new String[arrLength]; // ///////////Checkbox
-											// hardcoded
-			for (int i = 0; i < nodeLen; i++) {
-				Element el1 = (Element) singleOptionNode.item(i);
-				String checkbox = el1.getTextContent();
-				if (checkbox.equals(case1)) {
-					field[0] = "checked";
-				} else if (checkbox.equals(case2)) {
-					field[1] = "checked";
-				} else if (checkbox.equals(case3)) {
-					field[2] = "checked";
-				} else if (checkbox.equals(case4)) {
-					field[3] = "checked";
-				} else if (checkbox.equals(case5)) {
-					field[4] = "checked";
-				} else if (checkbox.equals(case6)) {
-					field[5] = "checked";
-				} else if (checkbox.equals(case7)) {
-					field[6] = "checked";
-				} else if (checkbox.equals(case8)) {
-					field[7] = "checked";
-				} else if (checkbox.equals(case9)) {
-					field[8] = "checked";
-				} else if (checkbox.equals(case10)) {
-					field[9] = "checked";
-				} else if (checkbox.equals(case11)) {
-					field[10] = "checked";
-				} else if (checkbox.equals(case12)) {
-					field[11] = "checked";
-				} else if (checkbox.equals(case13)) {
-					field[12] = "checked";
-				} else if (checkbox.equals(case14)) {
-					field[13] = "checked";
-				} else if (checkbox.equals(case15)) {
-					field[14] = "checked";
-				} else if (checkbox.equals(case16)) {
-					field[15] = "checked";
-				} else if (checkbox.equals(case17)) {
-					field[16] = "checked";
-				} else if (checkbox.equals(case18)) {
-					field[17] = "checked";
-				} else if (checkbox.equals(case19)) {
-					field[18] = "checked";
-				} else if (checkbox.equals(case20)) {
-					field[19] = "checked";
-				} else if (checkbox.equals(case21)) {
-					field[20] = "checked";
-				} else if (checkbox.equals(case22)) {
-					field[21] = "checked";
-				} else if (checkbox.equals(case23)) {
-					field[22] = "checked";
-				} else if (checkbox.equals(case24)) {
-					field[23] = "checked";
-				}
-			}
-		}
-		return field;
-	}
-
 	private MyBeanV1 processVersion1(Element eElement) {
 		NodeList SingleOptionNode = null;
 		MyBeanV1 bean = new MyBeanV1();
@@ -446,18 +443,8 @@ public class UploadServlet extends HttpServlet {
 				.getTextContent());
 		bean.setField2(eElement.getElementsByTagName("bankName").item(0)
 				.getTextContent());
-
-		bean.setField3(getFieldof24Lengths("information", 24, "income",
-				"accountBalances", "paymentHistory", "transactionHistory",
-				"transactionOrLossHistory", "creditHistory", "creditScores",
-				"assets", "investmentExperience",
-				"credit-basedInsuranceScores", "insuranceClaimHistory",
-				"purchaseHistory", "medicalInformation", "overdraftHistory",
-				"purchaseHistory", "accountTransactions", "riskTolerance",
-				"medical-relatedDebts", "creditHCardOrOtherDebts",
-				"mortgageRatesAndPayments", "retirementAssets",
-				"checkingAccountInformation", "employmentInformation",
-				"wireTransferInstructions", eElement, SingleOptionNode));
+		bean.setField3(getCheckboxValues("information", information, eElement,
+				SingleOptionNode));
 		bean.setField4(getFieldof2Lengths("whose", 2, "customer", "member",
 				eElement, SingleOptionNode));
 		bean.setField5(getFieldof2Lengths("r11", 2, "11yes", "11no", eElement,
@@ -500,55 +487,31 @@ public class UploadServlet extends HttpServlet {
 		bean.setField30(eElement
 				.getElementsByTagName("howWeProtectPersonalInfo").item(0)
 				.getTextContent());
-		bean.setField23(getFieldof5Lengths("informationWhen", 5, "openAccount",
-				"depositMoney", "applyLoan", "useCard", "payBill", eElement,
+		bean.setField23(getCheckboxValues("informationWhen", informationWhen, eElement,
 				SingleOptionNode));
 		bean.setField24(getFieldof2Lengths("q10", 2,
-				"information from other companies",
-				"information from credit bureau etc", eElement,
+				"informationFromOtherCompanies",
+				"informationFromCreditBureauEtc", eElement,
 				SingleOptionNode));
 		bean.setField25(eElement.getElementsByTagName("whyCantLimitShare")
 				.item(0).getTextContent());
-		bean.setField26(eElement.getElementsByTagName("affiliates").item(0)
+		bean.setField26(eElement.getElementsByTagName("affiliatesName").item(0)
 				.getTextContent());
-		bean.setField27(eElement.getElementsByTagName("nonAffiliates").item(0)
+		bean.setField27(eElement.getElementsByTagName("affiliatesList1").item(0)
 				.getTextContent());
-		bean.setField28(eElement.getElementsByTagName("jointMarketing").item(0)
+		bean.setField28(eElement.getElementsByTagName("affiliatesList2").item(0)
 				.getTextContent());
-		bean.setField29(eElement.getElementsByTagName("otherInfo").item(0)
+		bean.setField29(eElement.getElementsByTagName("affiliatesList3").item(0)
+				.getTextContent());
+		bean.setField30(eElement.getElementsByTagName("nonAffiliates").item(0)
+				.getTextContent());
+		bean.setField31(getFieldof2Lengths("jointMkt", 2, "jointMktyes", "jointMktno", eElement,
+				SingleOptionNode));
+		bean.setField32(eElement.getElementsByTagName("jointMarketing").item(0)
+				.getTextContent());
+		bean.setField33(eElement.getElementsByTagName("otherInfo").item(0)
 				.getTextContent());
 		return bean;
-	}
-
-	private String[] getFieldof5Lengths(String tagName, int arrLength,
-			String case1, String case2, String case3, String case4,
-			String case5, Element eElement, NodeList singleOptionNode) {
-
-		String[] field = null;
-		singleOptionNode = (NodeList) eElement.getElementsByTagName(tagName);
-		int nodeLen = singleOptionNode.getLength();
-		if (singleOptionNode != null && nodeLen > 0) {
-			field = new String[arrLength]; // ///////////Checkbox
-											// hardcoded
-			for (int i = 0; i < nodeLen; i++) {
-				Element el1 = (Element) singleOptionNode.item(i);
-				String checkbox = el1.getTextContent();
-				if (checkbox.equals(case1)) {
-					field[0] = "checked";
-				} else if (checkbox.equals(case2)) {
-					field[1] = "checked";
-				} else if (checkbox.equals(case3)) {
-					field[2] = "checked";
-				} else if (checkbox.equals(case4)) {
-					field[3] = "checked";
-				} else if (checkbox.equals(case5)) {
-					field[4] = "checked";
-				}
-
-			}
-		}
-		return field;
-
 	}
 
 	private String[] getFieldof2Lengths(String tagName, int arrLength,

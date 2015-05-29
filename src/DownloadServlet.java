@@ -1,7 +1,9 @@
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -49,11 +51,11 @@ public class DownloadServlet extends HttpServlet {
 			Document doc = docBuilder.newDocument();
 			Element rootElement = doc.createElement("task14");
 			doc.appendChild(rootElement);
-
 			// version elements
 			Element version = doc.createElement("Version");
 			rootElement.appendChild(version);
 
+			System.out.println("Version:"+request.getParameter("version"));
 			// set attribute to version element
 			Attr attr = doc.createAttribute("id");
 			attr.setValue(request.getParameter("version"));
@@ -98,10 +100,17 @@ public class DownloadServlet extends HttpServlet {
 				appendMultipleChild(doc, version, request, "q10");
 				version.appendChild(attachSingleChild(doc, "whyCantLimitShare",
 						request));
-				version.appendChild(attachSingleChild(doc, "affiliates",
+				version.appendChild(attachSingleChild(doc, "affiliatesName",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList1",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList2",
+						request));
+				version.appendChild(attachSingleChild(doc, "affiliatesList3",
 						request));
 				version.appendChild(attachSingleChild(doc, "nonAffiliates",
 						request));
+				appendMultipleChild(doc, version, request, "jointMkt");
 				version.appendChild(attachSingleChild(doc, "jointMarketing",
 						request));
 				version.appendChild(attachSingleChild(doc, "otherInfo", request));
@@ -231,6 +240,7 @@ public class DownloadServlet extends HttpServlet {
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 			transformer.setOutputProperty(
 					"{http://xml.apache.org/xslt}indent-amount", "2");
+			System.out.println(domToString(doc));
 			DOMSource source = new DOMSource(doc);
 			File file = new File(filePath + File.separator + fileName);
 			file.getParentFile().mkdirs();
@@ -250,7 +260,6 @@ public class DownloadServlet extends HttpServlet {
 
 			// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-			System.out.println("BHHHHHHHHHHHHHHHHHHHHHHh");
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 			response.setContentType("APPLICATION/OCTET-STREAM");
@@ -279,6 +288,7 @@ public class DownloadServlet extends HttpServlet {
 			HttpServletRequest request, String tagName) {
 		String[] results = request.getParameterValues(tagName);
 		if (results != null && results.length > 0) {
+			System.out.println("appendMultipleChild for tagName:"+tagName+" value:"+Arrays.toString(results));
 			for (int i = 0; i < results.length; i++) {
 				Element temp = doc.createElement(tagName);
 				temp.appendChild(doc.createTextNode(results[i]));
@@ -290,6 +300,7 @@ public class DownloadServlet extends HttpServlet {
 
 	private Element attachSingleChild(Document doc, String tagName,
 			HttpServletRequest request) {
+		System.out.println("attachSingleChild for tagName:"+tagName+" value:"+request.getParameter(tagName));
 		Element temp = doc.createElement(tagName);
 		temp.appendChild(doc.createTextNode(request.getParameter(tagName)));
 		// version.appendChild(date);
@@ -300,5 +311,22 @@ public class DownloadServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Inside DoPost");
 		doGet(request, response);
+	}
+	
+	public static String domToString(Document doc) {
+	    try {
+	        StringWriter sw = new StringWriter();
+	        TransformerFactory tf = TransformerFactory.newInstance();
+	        Transformer transformer = tf.newTransformer();
+	        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+	        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+	        transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+
+	        transformer.transform(new DOMSource(doc), new StreamResult(sw));
+	        return sw.toString();
+	    } catch (Exception ex) {
+	        throw new RuntimeException("Error converting to String", ex);
+	    }
 	}
 }
