@@ -1176,12 +1176,6 @@
 	$('#popoverData3').popover();
 	$('#popoverData4').popover();
 	
-	$(document).ready(function(){
-		$("#generate").click(function(){
-			window.open("privacyForm.html");
-		})
-	})
-	
 	$("input[name^='r']").click(function() {
 
 		var test = $(this).val();
@@ -1279,7 +1273,6 @@
 					});
 
 	function storeValues(form) {
-		alert(1);
 		var informationList = [];
 		$.each($("input[name='information']:checked"), function() {
 			informationList.push($(this).val());
@@ -1333,6 +1326,7 @@
 			jointMarketing : form.jointMarketing.value,
 			otherInfo : form.otherInfo.value
 		}));
+		window.open("privacyForm.html");
 		return true;
 	}
 

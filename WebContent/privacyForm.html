@@ -268,15 +268,43 @@ together market financial products or services to you.
         "applyLoan" : "Apply for a loan",
         "useCard" : "Use credit/debit card",
         "payBill" : "Pay your bills",
+        "seekFinancialTaxAdvice" : "Seek financial or tax advice",
+        "applyForInsurance" : "Apply for insurance",
+        "payInsurancePremium" : "Pay insurance premiums",
+        "directUsSellSecurities" : "Direct us to sell your securities",
+        "sellSecurities" : "Sell securities to us",
+        "buySecurities" : "Buy securities from us",
+        "tellWhereSendMoney" : "Tell us where to send the money",
+        "seekAdviceInvestments" : "Seek advice about your investments",
+        "directUsBuySecurities" : "Direct us to buy securities",
+        "fileAnInsuranceClaim" : "File an insurance claim",
+        "makeDepositsWithdrawalsFromAccount" : "Make deposits or withdrawals from your account",
+        "provideEmploymentInformation" : "Provide employment information",
+        "giveUsIncomeInformation" : "Give us your income information",
+        "enterIntoInvestmentAdvisoryContract" : "Enter into an investment advisory contract",
+        "giveEmploymentHistory" : "Give us your employment history",
+        "provideAccountInformation" : "Provide account information",
+        "tellAboutInvestmentRetirementEarnings" : "Tell us about your investment or retirement earnings",
+        "applyFinancing" : "Apply for financing",
+        "applyLease" : "Apply for a lease",
+        "tellAboutInvestmentRetirementPortfolio" : "Tell us about your investment or retirement portfolio",
+        "payUsByCheck" : "Pay us by check",
+        "giveWageStatement" : "Give us your wage statements",
+        "giveContactInformation" : "Give us your contact information",
+        "makeWireTransfer" : "Make a wire transfer",
+        "tellWhoReceivesMoney" : "Tell us who receives the money",
+        "provideMortgageInformation" : "Provide your mortgage information",
+        "showDriverLicense" : "Show your driver's license",
+        "applyLoan" : "Apply for a loan",
+        "showGovernmentIssuedId" : "Show your government-issued ID",
+        "orderCommodityFuturesOptionTrade" : "Order a commodity futures or option trade",
         "information from other companies" : "Collect personal information from other companies",
-        "information from credit bureau etc" : "Collect personal information from others, e.g. credit bureaus, affiliates, or other companies"
+        "information from credit bureau etc" : "Collect personal information from others, e.g. credit bureaus, affiliates, or other companies",
+        
       }
       var cookie = document.cookie.substring(5);
-      //alert(cookie);
       var obj = JSON.parse(cookie);
-      alert(obj);
       var version = obj["version"];
-      alert(version);
       if (version === "4") {
           var s;
           var accounts = "";
@@ -310,6 +338,7 @@ together market financial products or services to you.
       var informationWhen = obj["informationWhen"];
       var informationObj = informationWhen.split("#");
       var q10 = obj["q10"];
+      alert(informationObj[2]);
       $("#howtocollect1").html('<font face="Lucida Sans Unicode" >We collect your personal information, for example, when you<ul><li>' + value[informationObj[0]] + '<li>' + value[informationObj[1]] + '<li>' + value[informationObj[2]] + '</ul><br>' + value[q10] + '</font>');
       var whyCantLimitShare = obj["whyCantLimitShare"];
       $("#whyCantLimitShare").html('<font face="Lucida Sans Unicode" >Federal law gives you the right to limit only<br><ul><li>sharing for affiliates’ everyday business purposes—information about your creditworthiness <li>affiliates from using your information to market to you <li>sharing for nonaffiliates to market to you </ul><br>State laws and individual companies may give you additional rights to limit sharing.<br>' + whyCantLimitShare + '</font>');
@@ -317,7 +346,6 @@ together market financial products or services to you.
       var nonAffiliates = obj["nonAffiliates"];
       var jointMarketing = obj["jointMarketing"];
       var otherInfo = obj["otherInfo"];
-      alert(obj["qf"]);
       if (obj["r61"] == "r61no") {
     	  $("#affiliates1").html('<font face="Lucida Sans Unicode" >Companies related by common ownership or control. They can be financial and nonfinancial companies.<br><li>' + bankName + 'has no affiliates' + '</font>');
       } else {
