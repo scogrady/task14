@@ -6,8 +6,47 @@
 package databean;
 
 public class MyBeanV2 {
-	
+
 	private String field1;
+	private String field2;
+	private String[] field3;
+	private String[] field4;
+	private String[] field5;
+	private String[] field6;
+	private String[] field7;
+	private String[] field8;
+	private String[] field9;
+	private String[] field10;
+	private String[] field11;
+	private String[] field12;
+	private String[] field13;
+	private String[] field14;
+	private String[] field15;
+	private String[] field16;
+	private String[] field17;
+	private String[] field18;
+	private String[] field19;
+	private String field20;
+	private String field21;
+	private String field22;
+	private String field23;
+	private String field24;
+	private String field25;
+	private String field26;
+	private String[] field27;
+	private String[] field28;
+	private String field29;
+	private String[] field30;
+	private String field31;
+	private String field32;
+	private String field33;
+	private String field34;
+	private String field35;
+	private String[] field36;
+	private String field37;
+	private String field38;
+
+
 	public String getField1() {
 		return field1;
 	}
@@ -212,42 +251,35 @@ public class MyBeanV2 {
 	public void setField34(String field34) {
 		this.field34 = field34;
 	}
-	private String field2;
-	private String[] field3;
-	private String[] field4;
-	private String[] field5;
-	private String[] field6;
-	private String[] field7;
-	private String[] field8;
-	private String[] field9;
-	private String[] field10;
-	private String[] field11;
-	private String[] field12;
-	private String[] field13;
-	private String[] field14;
-	private String[] field15;
-	private String[] field16;
-	private String[] field17;
-	private String[] field18;
-	private String[] field19;
-	private String field20;
-	private String field21;
-	private String field22;
-	private String field23;
-	private String field24;
-	private String field25;
-	private String field26;
-	private String[] field27;
-	private String[] field28;
-	private String field29;
-	private String[] field30;
-	private String field31;
-	private String field32;
-	private String field33;
-	private String field34;
+	public String getField35() {
+		return field35;
+	}
+	public void setField35(String field35) {
+		this.field35 = field35;
+	}
+	public String[] getField36() {
+		return field36;
+	}
+	public void setField36(String[] field36) {
+		this.field36 = field36;
+	}
+	public String getField37() {
+		return field37;
+	}
+	public void setField37(String field37) {
+		this.field37 = field37;
+	}
+	public String getField38() {
+		return field38;
+	}
+	public void setField38(String field38) {
+		this.field38 = field38;
+	}
 
 
-	
-	
-			
+
+
+
+
+
 }
