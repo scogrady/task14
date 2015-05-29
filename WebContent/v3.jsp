@@ -1176,7 +1176,7 @@
 						<div class="col-md-10">
 							<input size="78" maxlength="62" type="text" class="form-control"
 								id="affiliatesName" name="affiliatesName"
-								value="${mybean.field26}" />
+								value="${mybean.field38}" />
 						</div>
 					</div>
 					<div class="form-group col-md-12">
@@ -1188,7 +1188,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80" id="affiliates"
 								name="affiliatesList1"><c:out
-									value="${mybean.field38}" /></textarea>
+									value="${mybean.field39}" /></textarea>
 						</div>
 					</div>
 					<div class="form-group col-md-12">
@@ -1200,7 +1200,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80" id="affiliates"
 								name="affiliatesList2"><c:out
-									value="${mybean.field39}" /></textarea>
+									value="${mybean.field40}" /></textarea>
 						</div>
 					</div>
 					<div class="form-group col-md-12">
@@ -1212,7 +1212,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80" id="affiliates"
 								name="affiliatesList3"><c:out
-									value="${mybean.field40}" /></textarea>
+									value="${mybean.field41}" /></textarea>
 						</div>
 					</div>
 				</div>
@@ -1228,7 +1228,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
 								id="nonAffiliates" name="nonAffiliates"><c:out
-									value="${mybean.field41}" /></textarea>
+									value="${mybean.field42}" /></textarea>
 						</div>
 					</div>
 				</div>
@@ -1242,11 +1242,11 @@
 
 					<div class="col-md-3">
 						<input type="radio" id="yes" name="jointMkt" value="jointMktyes"
-							checked="checked" ${mybean.field42[0]} checked="checked" />Yes
+							checked="checked" ${mybean.field43[0]} checked="checked" />Yes
 					</div>
 					<div class="col-md-3">
 						<input type="radio" id="no" name="jointMkt" value="jointMktno"
-							${mybean.field42[1]} /> No
+							${mybean.field43[1]} /> No
 					</div>
 
 
@@ -1262,7 +1262,7 @@
 						<div class="col-md-10">
 							<textarea class="form-control" rows="3" cols="80"
 								id="jointMarketing" name="jointMarketing" ><c:out
-									value="${mybean.field43}" /></textarea>
+									value="${mybean.field44}" /></textarea>
 
 						</div>
 					</div>
@@ -1276,7 +1276,7 @@
 					</div>
 					<div class="col-md-10">
 						<textarea class="form-control" rows="3" cols="80" id="otherInfo"
-							name="otherInfo"><c:out value="${mybean.field44}" /></textarea>
+							name="otherInfo"><c:out value="${mybean.field45}" /></textarea>
 					</div>
 				</div>
 
